@@ -1,6 +1,7 @@
 <template name="my-eno">
     <div>
         {this.data.name}12345
+        {this.data.name}12
     </div>
 </template>
 <script>
