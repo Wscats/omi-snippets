@@ -2,7 +2,7 @@
   "name": "omi-snippets",
   "displayName": "Omi Snippets",
   "description": "A beautify Visual Studio Code extension for .omi or .eno file",
-  "version": "0.4.3",
+  "version": "0.4.7",
   "author": "Eno Yao",
   "publisher": "Wscats",
   "icon": "logos/omi-logo.png",
@@ -23,7 +23,9 @@
     "jing",
     "jialong",
     "yaojialong",
-    "xie"
+    "xie",
+    "DK",
+    "lan"
   ],
   "activationEvents": [
     "onLanguage:html",
@@ -66,8 +68,13 @@
       {
         "id": "omi",
         "aliases": [
-          "HTML",
-          "html"
+          "Omi",
+          "html",
+          "Eno",
+          "omi",
+          "Eno.js",
+          "eno",
+          "yao"
         ],
         "extensions": [
           ".omi"
@@ -140,9 +147,10 @@
   "license": "MIT",
   "dependencies": {
     "@babel/core": "^7.4.4",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
     "@babel/preset-env": "^7.4.5",
     "@babel/preset-react": "^7.0.0",
-    "omil": "^1.4.9",
+    "omil": "^1.5.3",
     "prettier": "1.17.1"
   }
 }
