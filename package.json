@@ -1,7 +1,7 @@
 {
 	"name": "omi-snippets",
 	"description": "A beautify extension for .omi or .eno file",
-	"version": "0.2.1",
+	"version": "0.2.2",
 	"author": "Eno Yao",
 	"publisher": "Wscats",
 	"icon": "images/omijs-logo.png",
@@ -67,6 +67,10 @@
 		"snippets": [
 			{
 				"language": "omi",
+				"path": "./snippets/snippets.json"
+			},
+			{
+				"language": "eno",
 				"path": "./snippets/snippets.json"
 			}
 		]
