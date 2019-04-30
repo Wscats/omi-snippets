@@ -1,7 +1,10 @@
 # Omi Snippets
 
-Visual Studio Code syntax highlighting for single-file Omi.js components (enabled by omil). [Try it Now!](https://marketplace.visualstudio.com/items?itemName=Wscats.omi-snippets)
+[Try it Now!](https://marketplace.visualstudio.com/items?itemName=Wscats.omi-snippets)
 
+Visual Studio Code syntax highlighting for single-file Omi.js components (enabled by omil).
+
+Or [Download Vsix!](https://github.com/Wscats/omi-snippets/releases/download/0.22/omi-snippets-0.2.2.vsix) to install in Visual Studio Code
 
 # Quick Start
 
