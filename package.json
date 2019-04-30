@@ -1,0 +1,57 @@
+{
+	"name": "omi-snippets",
+	"description": "A beautify extension for .omi or .eno file",
+	"version": "0.1.8",
+	"author": "Eno Yao",
+	"publisher": "Wscats",
+	"icon": "images/omijs-logo.png",
+	"keywords": [
+		"omi",
+		"omijs",
+		"omi.js",
+		"eno",
+		"eno yao",
+		"yao"
+	],
+	"engines": {
+		"vscode": "^1.33.0"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Wscats/omil.git"
+	},
+	"categories": [
+		"Programming Languages"
+	],
+	"contributes": {
+		"languages": [
+			{
+				"id": "omi",
+				"aliases": [
+					"Omi.js",
+					"omi",
+					"Eno.js",
+					"eno"
+				],
+				"extensions": [
+					".omi"
+				],
+				"configuration": "./omi.configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "omi",
+				"scopeName": "text.html.omi",
+				"path": "./syntaxes/omi.tmLanguage.json"
+			}
+		],
+		"snippets": [
+			{
+				"language": "omi",
+				"path": "./snippets/snippets.json"
+			}
+		]
+	},
+	"license": "MIT"
+}

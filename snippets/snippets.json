@@ -1,0 +1,96 @@
+{
+	"import": {
+        "prefix": "import",
+        "body": "import { ${1:define, WeElement, extractClass} } from '${2:omi}'",
+        "description": "Omi module"
+    },
+    "define": {
+        "prefix": "export default",
+        "scope": "javascript,typescript",
+        "body": [
+            "export default {",
+            "\tcss() {",
+            "\t\treturn (",
+            "\t\t\t${2}",
+            "\t\t)",
+            "\t}",
+            "\tinstall() {",
+            "\t\tthis.data = {",
+            "\t\t\t${1}",
+            "\t\t}",
+            "\t}",
+            "})"
+        ],
+        "description": "Omi function struct"
+    },
+    "export": {
+        "prefix": "modult.export",
+        "body": [
+            "modult.export = {",
+            "\tcss() {",
+            "\t\treturn (",
+            "\t\t\t${2}",
+            "\t\t)",
+            "\t}",
+            "\tinstall() {",
+            "\t\tthis.data = {",
+            "\t\t\t${1}",
+            "\t\t}",
+            "\t}",
+            "})"
+        ],
+        "description": "Omi function struct"
+    },
+    "render": {
+        "prefix": "render",
+        "body": [
+            "render(${1}) {",
+            "\treturn (",
+            "\t\t${2}",
+            "\t)",
+            "}"
+        ],
+        "description": "Omi function struct"
+    },
+    "templateLang": {
+        "prefix": "templateLang",
+        "scope": "html",
+        "body": [
+            "<template lang=\"$1\">",
+            "\t<div$2>",
+            "\t\t$0",
+            "\t</div>",
+            "</template>"
+        ],
+        "description": "template element"
+    },
+    "script": {
+        "prefix": "script",
+        "body": [
+            "<script>",
+            "export default {",
+            "\t$1",
+            "}",
+            "</script>"
+        ],
+        "description": "script element"
+    },
+    "styleLang": {
+        "prefix": "styleLang",
+        "body": [
+            "<style lang=\"$1\">",
+            "\t$0",
+            "</style>"
+        ],
+        "description": "style element with lang attribute"
+	},
+	"styleLangSass": {
+        "prefix": "styleLangSass",
+        "body": [
+            "<style lang=\"scss\">",
+            "\t$1",
+            "</style>"
+        ],
+        "description": "style element with lang attribute"
+    }
+}
