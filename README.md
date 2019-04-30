@@ -2,7 +2,7 @@
 
 Visual Studio Syntax highlighting for single-file [Omi.js](https://github.com/Tencent/omi) components (enabled by [omil](https://github.com/Wscats/omil)).
 
-![screenshot](./images/screenshot.png)
+<img width="250" src="https://wscats.github.io/omi-snippets/images/screenshot.png" />
 
 # Install
 
