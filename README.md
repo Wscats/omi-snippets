@@ -19,7 +19,7 @@ yarn
 vsce package
 ```
 
-![omi-snippets.gif](https://wscats.github.io/omi-snippets/images/omi-snippets.gif)
+<img src="https://wscats.github.io/omi-snippets/images/omi-snippets.gif" />
 
 # Code Snippets
 
