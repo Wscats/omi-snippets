@@ -1,10 +1,10 @@
 {
 	"import": {
         "prefix": "import",
-        "body": "import { ${1:define, WeElement, extractClass} } from '${2:omi}'",
+        "body": "import { ${1:nextTick, observe, extractClass} } from '${2:omi}'",
         "description": "Omi module"
     },
-    "define": {
+    "export default": {
         "prefix": "export default",
         "scope": "javascript,typescript",
         "body": [
@@ -21,9 +21,9 @@
             "\t}",
             "})"
         ],
-        "description": "Omi function struct"
+        "description": "Omi export struct"
     },
-    "export": {
+    "modult.export": {
         "prefix": "modult.export",
         "body": [
             "modult.export = {",
@@ -39,7 +39,7 @@
             "\t}",
             "})"
         ],
-        "description": "Omi function struct"
+        "description": "Omi export struct"
     },
     "render": {
         "prefix": "render",
@@ -52,6 +52,17 @@
         ],
         "description": "Omi function struct"
     },
+    "css": {
+        "prefix": "css",
+        "body": [
+            "css(${1}) {",
+            "\treturn (",
+            "\t\t${2}",
+            "\t)",
+            "}"
+        ],
+        "description": "Omi css struct"
+    },
     "templateLang": {
         "prefix": "templateLang",
         "scope": "html",
@@ -62,7 +73,7 @@
             "\t</div>",
             "</template>"
         ],
-        "description": "template element"
+        "description": "Template element"
     },
     "script": {
         "prefix": "script",
@@ -73,7 +84,7 @@
             "}",
             "</script>"
         ],
-        "description": "script element"
+        "description": "Script element"
     },
     "styleLang": {
         "prefix": "styleLang",
@@ -82,7 +93,7 @@
             "\t$0",
             "</style>"
         ],
-        "description": "style element with lang attribute"
+        "description": "Style element with lang attribute"
 	},
 	"styleLangSass": {
         "prefix": "styleLangSass",
@@ -91,6 +102,25 @@
             "\t$1",
             "</style>"
         ],
-        "description": "style element with lang attribute"
+        "description": "Style element with Sass attribute"
+    },
+    "scaffold": {
+        "prefix": "scaffold",
+        "body": [
+            "<template>",
+            "\t<div>",
+            "\t\t$0",
+            "\t</div>",
+            "<script>",
+            "export default {",
+            "\t$1",
+            "}",
+            "</script>",
+            "</template>",
+            "<style>",
+            "\t$2",
+            "</style>"
+        ],
+        "description": "Scaffold <template><script><style>"
     }
 }

@@ -1,7 +1,7 @@
 {
 	"name": "omi-snippets",
 	"description": "A beautify extension for .omi or .eno file",
-	"version": "0.1.8",
+	"version": "0.2.0",
 	"author": "Eno Yao",
 	"publisher": "Wscats",
 	"icon": "images/omijs-logo.png",
@@ -37,11 +37,29 @@
 					".omi"
 				],
 				"configuration": "./omi.configuration.json"
+			},
+			{
+				"id": "eno",
+				"aliases": [
+					"Omi.js",
+					"omi",
+					"Eno.js",
+					"eno"
+				],
+				"extensions": [
+					".eno"
+				],
+				"configuration": "./omi.configuration.json"
 			}
 		],
 		"grammars": [
 			{
 				"language": "omi",
+				"scopeName": "text.html.omi",
+				"path": "./syntaxes/omi.tmLanguage.json"
+			},
+			{
+				"language": "eno",
 				"scopeName": "text.html.omi",
 				"path": "./syntaxes/omi.tmLanguage.json"
 			}
