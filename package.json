@@ -1,7 +1,7 @@
 {
 	"name": "omi-snippets",
-	"description": "A beautify extension for .omi or .eno file",
-	"version": "0.2.2",
+	"description": "A beautify Visual Studio Code extension for .omi or .eno file",
+	"version": "0.2.3",
 	"author": "Eno Yao",
 	"publisher": "Wscats",
 	"icon": "images/omijs-logo.png",
@@ -11,14 +11,15 @@
 		"omi.js",
 		"eno",
 		"eno yao",
-		"yao"
+		"yao",
+		"wscats"
 	],
 	"engines": {
 		"vscode": "^1.33.0"
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/Wscats/omil.git"
+		"url": "https://github.com/Wscats/omi-snippets"
 	},
 	"categories": [
 		"Programming Languages"
