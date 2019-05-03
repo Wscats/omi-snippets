@@ -50,4 +50,4 @@ The `<script>` block uses the syntax highlighting currently active for you norma
 
 # License
 
-[MIT](http://opensource.org/licenses/MIT)
+[MIT](http://opensource.org/licenses/MIT) @[Eno Yao](https://github.com/Wscats)
