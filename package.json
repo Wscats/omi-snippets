@@ -1,10 +1,10 @@
 {
 	"name": "omi-snippets",
 	"description": "A beautify Visual Studio Code extension for .omi or .eno file",
-	"version": "0.2.4",
+	"version": "0.2.5",
 	"author": "Eno Yao",
 	"publisher": "Wscats",
-	"icon": "images/omijs-logo.png",
+	"icon": "images/omi-logo.png",
 	"keywords": [
 		"omi",
 		"omijs",
@@ -12,8 +12,12 @@
 		"eno",
 		"eno yao",
 		"yao",
-		"wscats"
+		"wscats",
+		"yjl"
 	],
+	"scripts": {
+		"build": "vsce package"
+	},
 	"engines": {
 		"vscode": "^1.33.0"
 	},
@@ -25,6 +29,13 @@
 		"Programming Languages"
 	],
 	"contributes": {
+		"iconThemes": [
+			{
+				"id": "vscode-icons",
+				"label": "VSCode Icons",
+				"path": "./icons/icons.json"
+			}
+		],
 		"languages": [
 			{
 				"id": "omi",
@@ -45,7 +56,8 @@
 					"Omi.js",
 					"omi",
 					"Eno.js",
-					"eno"
+					"eno",
+					"yao"
 				],
 				"extensions": [
 					".eno"

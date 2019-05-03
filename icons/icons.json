@@ -1,0 +1,16 @@
+{
+    "iconDefinitions": {
+        "_f_omi": {
+            "iconPath": "../images/omi-logo.svg"
+        }
+    },
+    "fileExtensions": {
+        "omi": "_f_omi"
+    },
+    "fileNames": {
+        "omi": "_f_omi"
+    },
+    "languageIds": {
+        "omi": "_f_omi"
+    }
+}
