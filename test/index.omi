@@ -1,0 +1,19 @@
+<template>
+    <div>
+        <!-- JSX -->
+    </div>
+</template>
+<script>
+// JS
+var a = 'abc'
+export default {
+    install() {
+        this.data = {
+        }
+    }
+}
+Hello I'm YJL(Eno Yao), Thank you for your use!
+</script>
+<style>
+/* CSS */
+</style>

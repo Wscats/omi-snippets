@@ -25,6 +25,10 @@
 		"type": "git",
 		"url": "https://github.com/Wscats/omi-snippets"
 	},
+	"bugs": {
+		"url": "https://github.com/Wscats/omi-snippets/issues",
+		"email": "kalone.cool@gmail.com"
+	},
 	"categories": [
 		"Programming Languages"
 	],
@@ -80,11 +84,35 @@
 		"snippets": [
 			{
 				"language": "omi",
-				"path": "./snippets/snippets.json"
+				"path": "./snippets/omi.json"
+			},
+			{
+				"language": "omi",
+				"path": "./snippets/js.json"
+			},
+			{
+				"language": "omi",
+				"path": "./snippets/html.json"
+			},
+			{
+				"language": "omi",
+				"path": "./snippets/css.json"
 			},
 			{
 				"language": "eno",
-				"path": "./snippets/snippets.json"
+				"path": "./snippets/omi.json"
+			},
+			{
+				"language": "eno",
+				"path": "./snippets/js.json"
+			},
+			{
+				"language": "eno",
+				"path": "./snippets/html.json"
+			},
+			{
+				"language": "eno",
+				"path": "./snippets/css.json"
 			}
 		]
 	},

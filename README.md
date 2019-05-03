@@ -4,7 +4,7 @@
 
 Visual Studio Code syntax highlighting for single-file Omi.js components (enabled by omil).
 
-Or [Download Vsix!](https://github.com/Wscats/omi-snippets/releases/download/0.25/omi-snippets-0.2.5.vsix) to install in Visual Studio Code
+Or [Download Vsix!](https://github.com/Wscats/omi-snippets/releases/download/0.26/omi-snippets-0.2.6.vsix) to install in Visual Studio Code
 
 # Quick Start
 
@@ -47,6 +47,13 @@ vsce package
 The `<script>` block uses the syntax highlighting currently active for you normal `.js` files. To support JSX highlighting inside Omi files, just set [Babel javascript highlighting package](https://packagecontrol.io/packages/Babel), which supports JSX, as your default JS highlighting. 
 
 > Note you may need to explicitly disable Sublime's default `JavaScript` package to make it work.
+
+# Thanks
+
+- [html-snippets](https://github.com/abusaidm/html-snippets)
+- [vscode-javascript](https://github.com/xabikos/vscode-javascript)
+- [vscode-javascript-snippets](https://github.com/nathanchapman/vscode-javascript-snippets)
+- [vsc-css-snippets](https://github.com/joy-yu/vsc-css-snippets)
 
 # License
 

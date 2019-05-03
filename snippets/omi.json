@@ -128,5 +128,12 @@
             "</style>"
         ],
         "description": "Scaffold <template><script><style>"
+    },
+    "enoyao": {
+        "prefix": "enoyaowscats",
+        "body": [
+            "/* Hello I'm YJL(Eno Yao), Thank you for your use! */"
+        ],
+        "description": "Style element with Sass attribute"
     }
 }
