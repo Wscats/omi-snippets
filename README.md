@@ -48,6 +48,11 @@ The `<script>` block uses the syntax highlighting currently active for you norma
 
 > Note you may need to explicitly disable Sublime's default `JavaScript` package to make it work.
 
+# Contributors
+
+| [<img src="https://avatars1.githubusercontent.com/u/17243165?s=460&v=4" width="60px;"/><br /><sub>Eno Yao</sub>](https://github.com/Wscats)|
+| - |
+
 # Thanks
 
 - [html-snippets](https://github.com/abusaidm/html-snippets)
@@ -57,4 +62,4 @@ The `<script>` block uses the syntax highlighting currently active for you norma
 
 # License
 
-[MIT](http://opensource.org/licenses/MIT) @[Eno Yao](https://github.com/Wscats)
+[MIT](http://opensource.org/licenses/MIT)
