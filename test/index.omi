@@ -1,5 +1,6 @@
 <template>
     <div>
+    <p name={this.data.name}>Hello World</p>
         <!-- JSX -->
     </div>
 </template>
@@ -9,10 +10,22 @@ var a = 'abc'
 export default {
     install() {
         this.data = {
+            name:'yao',
+            skill:'ps'
         }
     }
 }
+
 </script>
-<style>
-/* CSS */
+<style lang="scss">
+p{
+    color:red;
+    span{
+        font-size:20px;
+        span{
+            width:100px;
+        }
+    }
+    
+}
 </style>
