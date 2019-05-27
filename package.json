@@ -1,7 +1,7 @@
 {
   "name": "omi-snippets",
   "description": "A beautify Visual Studio Code extension for .omi or .eno file",
-  "version": "0.2.7",
+  "version": "0.2.9",
   "author": "Eno Yao",
   "publisher": "Wscats",
   "icon": "images/omi-logo.png",
@@ -125,8 +125,7 @@
     "@babel/core": "^7.4.4",
     "@babel/preset-env": "^7.4.5",
     "@babel/preset-react": "^7.0.0",
-    "lodash": "^4.17.11",
-    "node-sass": "latest",
-    "omil": "latest"
+    "omil": "latest",
+    "prettier": "1.17.1"
   }
 }
