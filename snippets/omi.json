@@ -23,10 +23,10 @@
         ],
         "description": "Omi export struct"
     },
-    "modult.export": {
-        "prefix": "modult.export",
+    "module.exports": {
+        "prefix": "module.exports",
         "body": [
-            "modult.export = {",
+            "module.exports = {",
             "\tcss() {",
             "\t\treturn (",
             "\t\t\t${2}",
