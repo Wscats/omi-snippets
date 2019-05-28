@@ -50,8 +50,9 @@ The `<script>` block uses the syntax highlighting currently active for you norma
 
 # Contributors
 
-| [<img src="https://avatars1.githubusercontent.com/u/17243165?s=460&v=4" width="60px;"/><br /><sub>Eno Yao</sub>](https://github.com/Wscats)|  <img src="https://avatars1.githubusercontent.com/u/17243165?s=460&v=4" width="60px;"/><br /><sub>Lemon</sub>  |
+| [<img src="https://avatars1.githubusercontent.com/u/17243165?s=460&v=4" width="60px;"/><br /><sub>Eno Yao</sub>](https://github.com/Wscats)|  <img src="https://wscats.github.io/omi-snippets/images/lemon.png" width="60px;"/><br /><sub>Lemon</sub>  |
 | - | - |
+
 
 # Thanks
 
