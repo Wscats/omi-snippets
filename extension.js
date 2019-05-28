@@ -22,6 +22,8 @@ const readFileName = (path, fileContext) => {
     const fileNameWithoutSuffixArray = fileNameWithoutSuffix[0].split('.');
     switch (fileNameWithoutSuffixArray[fileNameWithoutSuffixArray.length - 1]) {
         case 'omi':
+            console.log(fileNameWithoutSuffixArray);
+            console.log(omil);
             omil({
                 sass: 'extension',
                 options: null,
