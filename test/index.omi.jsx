@@ -20,21 +20,22 @@ export default class extends WeElement {
   p span {
     font-size: 20px; }
     p span span {
-      width: 100px; }
+      width: 400px; }
 `;
   }
   render() {
-    return (
+    return html`
       <div>
-        <p name={this.data.name}>Hello World</p>
+        <p name="{this.data.name}">Hello World</p>
       </div>
-    );
+    `;
   }
 
   install() {
     this.data = {
       name: "yao",
-      skill: "ps"
+      skill: "ps",
+      obj: {}
     };
   }
 }

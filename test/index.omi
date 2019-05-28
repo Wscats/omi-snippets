@@ -1,4 +1,4 @@
-<template>
+<template lang="html">
     <div>
     <p name={this.data.name}>Hello World</p>
         <!-- JSX -->
@@ -11,19 +11,22 @@ export default {
     install() {
         this.data = {
             name:'yao',
-            skill:'ps'
+            skill:'ps',
+            obj: {
+            }
         }
     }
 }
-
 </script>
 <style lang="scss">
+$color : red;
+$size : 20px;
 p{
-    color:red;
+    color:$color;
     span{
-        font-size:20px;
+        font-size:$size;
         span{
-            width:100px;
+            width:$size*20;
         }
     }
     
