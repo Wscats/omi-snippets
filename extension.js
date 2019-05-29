@@ -6,6 +6,7 @@ const {
     compileSass
 } = require('omil/libs/styles/extension');
 const prettier = require('prettier');
+const os = require('os');
 
 const readFileContext = (path) => {
     return fs.readFileSync(path).toString();
@@ -30,9 +31,16 @@ const writeScssFileContext = (path, data) => {
     });
 }
 
-const handleFile = (path, fileContext) => {
-    const fileNameWithoutSuffix = path.match(/\/([^\/]+)\.(omi|eno|scss)$/g);
-    console.log(fileNameWithoutSuffix);
+const readFileName = (path, fileContext) => {
+    const platform = os.platform();
+    let fileNameWithoutSuffix;
+    if (platform === 'win32') {
+        fileNameWithoutSuffix = path.match(/\\([^\\]+)\.(omi|eno|scss)$/g);
+    } else {
+        fileNameWithoutSuffix = path.match(/\/([^\/]+)\.(omi|eno|scss)$/g);
+    }
+
+    console.log(platform, fileNameWithoutSuffix);
     const fileNameWithoutSuffixArray = fileNameWithoutSuffix[0].split('.');
     console.log(fileNameWithoutSuffixArray[fileNameWithoutSuffixArray.length - 1]);
     switch (fileNameWithoutSuffixArray[fileNameWithoutSuffixArray.length - 1]) {
@@ -81,8 +89,8 @@ function activate(context) {
             fileName
         } = document
         const fileContext = readFileContext(fileName);
-        console.log(fileName, fileContext)
-        handleFile(fileName, fileContext);
+        console.log(fileName, fileContext);
+        readFileName(fileName, fileContext);
     });
 }
 
