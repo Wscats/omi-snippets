@@ -2,6 +2,9 @@ const vscode = require('vscode');
 const fs = require('fs');
 const path = require('path');
 const omil = require('omil');
+const {
+    compileSass
+} = require('omil/libs/styles/extension');
 const prettier = require('prettier');
 
 const readFileContext = (path) => {
@@ -27,7 +30,7 @@ const writeScssFileContext = (path, data) => {
     });
 }
 
-const readFileName = (path, fileContext) => {
+const handleFile = (path, fileContext) => {
     const fileNameWithoutSuffix = path.match(/\/([^\/]+)\.(omi|eno|scss)$/g);
     console.log(fileNameWithoutSuffix);
     const fileNameWithoutSuffixArray = fileNameWithoutSuffix[0].split('.');
@@ -48,20 +51,19 @@ const readFileName = (path, fileContext) => {
             });
             break;
         case 'scss':
-            console.log(fileNameWithoutSuffixArray);
-            console.log(omil);
-            omil({
-                sass: 'extension',
-                options: null,
-                source: `
-                    <template>
-                        <div>eno</div>
-                    </template>
-                `,
-                callback(data) {
-                    console.log(data);
-                }
-            }).compileSass(fileContext).then((data)=>{
+            // omil({
+            //     sass: 'extension',
+            //     options: null,
+            //     source: `
+            //         <template>
+            //             <div>eno</div>
+            //         </template>
+            //     `,
+            //     callback(data) {
+            //         console.log(data);
+            //     }
+            // }).
+            compileSass(fileContext).then((data)=>{
                 console.log(data.text);
                 writeScssFileContext(path, data.text);
             })
@@ -79,7 +81,8 @@ function activate(context) {
             fileName
         } = document
         const fileContext = readFileContext(fileName);
-        readFileName(fileName, fileContext);
+        console.log(fileName, fileContext)
+        handleFile(fileName, fileContext);
     });
 }
 

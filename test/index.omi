@@ -5,7 +5,7 @@
     </div>
 </template>
 <script>
-// JS
+// JS avc
 var a = 'abc'
 export default {
     install() {
@@ -17,6 +17,7 @@ export default {
         }
     }
 }
+
 </script>
 <style lang="scss">
 $color : red;

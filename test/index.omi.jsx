@@ -10,7 +10,7 @@ import {
   html
 } from "omi";
 
-// JS
+// JS avc
 var a = "abc";
 
 export default class extends WeElement {
