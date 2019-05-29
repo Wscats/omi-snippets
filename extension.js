@@ -3,6 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const omil = require('omil');
 const prettier = require('prettier');
+const os = require('os');
 
 const readFileContext = (path) => {
     return fs.readFileSync(path).toString();
@@ -28,8 +29,15 @@ const writeScssFileContext = (path, data) => {
 }
 
 const readFileName = (path, fileContext) => {
-    const fileNameWithoutSuffix = path.match(/\/([^\/]+)\.(omi|eno|scss)$/g);
-    console.log(fileNameWithoutSuffix);
+    const platform = os.platform();
+    let fileNameWithoutSuffix;
+    if (platform === 'win32') {
+        fileNameWithoutSuffix = path.match(/\\([^\\]+)\.(omi|eno|scss)$/g);
+    } else {
+        fileNameWithoutSuffix = path.match(/\/([^\/]+)\.(omi|eno|scss)$/g);
+    }
+
+    console.log(platform, fileNameWithoutSuffix);
     const fileNameWithoutSuffixArray = fileNameWithoutSuffix[0].split('.');
     console.log(fileNameWithoutSuffixArray[fileNameWithoutSuffixArray.length - 1]);
     switch (fileNameWithoutSuffixArray[fileNameWithoutSuffixArray.length - 1]) {
@@ -61,7 +69,7 @@ const readFileName = (path, fileContext) => {
                 callback(data) {
                     console.log(data);
                 }
-            }).compileSass(fileContext).then((data)=>{
+            }).compileSass(fileContext).then((data) => {
                 console.log(data.text);
                 writeScssFileContext(path, data.text);
             })
@@ -79,6 +87,7 @@ function activate(context) {
             fileName
         } = document
         const fileContext = readFileContext(fileName);
+        console.log(fileName, fileContext);
         readFileName(fileName, fileContext);
     });
 }
