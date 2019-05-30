@@ -1,0 +1,15 @@
+<div id="output"></div>
+<!-- Load Babel -->
+<!-- v6 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> -->
+<script src="../libs/babel/babel.js"></script>
+<!-- Your custom script here -->
+<script type="text/babel">
+    const { transform } = Babel
+    // console.log(transform(<div>123</div>))
+    transform(`<div>123</div>`,null,(err, result) => {
+        if (err) {
+        } else {
+            console.log(result)
+        }
+    })
+</script>

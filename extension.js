@@ -48,7 +48,21 @@ const readFileName = (path, fileContext) => {
             console.log(fileNameWithoutSuffixArray);
             console.log(omil);
             omil({
-                sass: 'extension',
+                type: 'extension',
+                options: null,
+                source: fileContext,
+                callback(data) {
+                    console.log(data)
+                    // create jsx file and write component jsx 
+                    writeJsxFileContext(path, data);
+                }
+            });
+            break;
+        case 'eno':
+            console.log(fileNameWithoutSuffixArray);
+            console.log(omil);
+            omil({
+                type: 'extension',
                 options: null,
                 source: fileContext,
                 callback(data) {
@@ -59,19 +73,7 @@ const readFileName = (path, fileContext) => {
             });
             break;
         case 'scss':
-            // omil({
-            //     sass: 'extension',
-            //     options: null,
-            //     source: `
-            //         <template>
-            //             <div>eno</div>
-            //         </template>
-            //     `,
-            //     callback(data) {
-            //         console.log(data);
-            //     }
-            // }).
-            compileSass(fileContext).then((data)=>{
+            compileSass(fileContext).then((data) => {
                 console.log(data.text);
                 writeScssFileContext(path, data.text);
             })

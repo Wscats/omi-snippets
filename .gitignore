@@ -1,4 +1,3 @@
 *.vsix
 # images
 node_modules
-test
