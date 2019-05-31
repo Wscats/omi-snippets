@@ -5,6 +5,8 @@ const omil = require('omil');
 const {
     compileSass
 } = require('omil/libs/styles/extension');
+
+const transformJsx = require('omil/libs/scripts/extension/transform');
 const prettier = require('prettier');
 const os = require('os');
 
@@ -21,6 +23,19 @@ const writeJsxFileContext = (path, data) => {
         console.log('写入成功');
     });
 }
+
+// JSX
+const writeJsxFileContext2 = async (path, data) => {
+    const code = prettier.format(data, {
+        parser: "babel",
+    });
+    const jsxObj = await transformJsx(code, null);
+    console.log(jsxObj.code);
+    fs.writeFile(`${path}.eno.jsx`, jsxObj.code, () => {
+        console.log('写入成功');
+    });
+}
+
 // SCSS
 const writeScssFileContext = (path, data) => {
     const code = prettier.format(data, {
@@ -35,9 +50,9 @@ const readFileName = (path, fileContext) => {
     const platform = os.platform();
     let fileNameWithoutSuffix;
     if (platform === 'win32') {
-        fileNameWithoutSuffix = path.match(/\\([^\\]+)\.(omi|eno|scss)$/g);
+        fileNameWithoutSuffix = path.match(/\\([^\\]+)\.(omi|eno|scss|jsx)$/g);
     } else {
-        fileNameWithoutSuffix = path.match(/\/([^\/]+)\.(omi|eno|scss)$/g);
+        fileNameWithoutSuffix = path.match(/\/([^\/]+)\.(omi|eno|scss|jsx)$/g);
     }
 
     console.log(platform, fileNameWithoutSuffix);
@@ -71,6 +86,11 @@ const readFileName = (path, fileContext) => {
                     writeJsxFileContext(path, data);
                 }
             });
+            break;
+        case 'jsx':
+            console.log(fileNameWithoutSuffixArray);
+            console.log(path, fileContext);
+            writeJsxFileContext2(path, fileContext);
             break;
         case 'scss':
             compileSass(fileContext).then((data) => {
