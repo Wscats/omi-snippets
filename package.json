@@ -57,6 +57,7 @@
       {
         "id": "omi",
         "aliases": [
+          "Eno",
           "Omi.js",
           "omi",
           "Eno.js",
@@ -86,7 +87,10 @@
       {
         "language": "omi",
         "scopeName": "text.html.omi",
-        "path": "./syntaxes/omi.tmLanguage.json"
+        "path": "./syntaxes/omi.tmLanguage.json",
+        "embeddedLanguages": {
+          "meta.embedded.block.javascript": "source.js"
+        }
       },
       {
         "language": "eno",
