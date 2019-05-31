@@ -1,7 +1,7 @@
 {
   "name": "omi-snippets",
   "description": "A beautify Visual Studio Code extension for .omi or .eno file",
-  "version": "0.3.4",
+  "version": "0.3.5",
   "author": "Eno Yao",
   "publisher": "Wscats",
   "icon": "logos/omi-logo.png",
