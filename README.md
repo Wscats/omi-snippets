@@ -4,7 +4,7 @@
 
 Visual Studio Code syntax highlighting for single-file Omi.js components (enabled by omil).
 
-Or [Download Vsix!](https://github.com/Wscats/omi-snippets/releases/download/0.27/omi-snippets-0.2.7.vsix) to install in Visual Studio Code
+Or [Download Vsix!](https://github.com/Wscats/omi-snippets/releases/download/0.41/omi-snippets-0.4.1.vsix) to install in Visual Studio Code
 
 # Contributors
 
