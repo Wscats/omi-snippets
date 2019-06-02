@@ -1,6 +1,7 @@
 <template name="my-eno">
     <div>
-        HELLO WORLD {this.data.name}
+        HELLO WORLD UUUUU {this.data.name}
+        <p>ABC</p>
     </div>
 </template>
 <script>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="https://tencent.github.io/omi/packages/omi/dist/omi.js"></script>
+    <script>
+      const { WeElement, define, html, h, render } = omi;
+
+      import axios from "axios";
+
+      const myEno = class extends WeElement {
+        css() {
+          return `div{color:red}div p{font-size:14px}
+`;
+        }
+
+        render() {
+          return h(
+            "div",
+            null,
+            "HELLO WORLD UUUUU ",
+            this.data.name,
+            h("p", null, "ABC")
+          );
+        }
+
+        install() {
+          this.data = {
+            name: "yao",
+            skill: ["ps"]
+          };
+        }
+      };
+
+      define("my-eno", myEno);
+
+      render(
+        html`
+          <my-eno />
+        `,
+        "body"
+      );
+    </script>
+  </body>
+</html>

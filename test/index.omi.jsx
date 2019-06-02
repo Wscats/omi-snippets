@@ -1,23 +1,21 @@
-import {
-  // register component
-  WeElement,
-  // when you use component, you should define
-  define,
-  h
-} from "omi";
+import { WeElement, define, h } from "omi";
 
 import axios from "axios";
 
 const myEno = class extends WeElement {
   css() {
-    return `div {
-  color: red; }
-  div p {
-    font-size: 14px; }
+    return `div{color:red}div p{font-size:14px}
 `;
   }
+
   render() {
-    return h("div", null, "HELLO WORLD ", this.data.name);
+    return h(
+      "div",
+      null,
+      "HELLO WORLD UUUUU ",
+      this.data.name,
+      h("p", null, "ABC")
+    );
   }
 
   install() {
@@ -27,4 +25,5 @@ const myEno = class extends WeElement {
     };
   }
 };
+
 define("my-eno", myEno);

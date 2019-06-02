@@ -46,6 +46,33 @@ const writeScssFileContext = (path, data) => {
     });
 }
 
+// HTML
+const writeHtmlFileContext = (path, data) => {
+    const code = prettier.format(`
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Eno Yao</title>
+        </head>
+        <body>
+        <script src="https://tencent.github.io/omi/packages/omi/dist/omi.js"></script>
+        <script>
+        ${data}
+        </script>
+        </body>
+        </html>
+    `, {
+        parser: "html",
+    });
+    fs.writeFile(`${path}.html`, 
+    code
+    , () => {
+        console.log('写入成功');
+    });
+}
+
 const readFileName = (path, fileContext) => {
     const platform = os.platform();
     let fileNameWithoutSuffix;
@@ -60,8 +87,10 @@ const readFileName = (path, fileContext) => {
     console.log(fileNameWithoutSuffixArray[fileNameWithoutSuffixArray.length - 1]);
     switch (fileNameWithoutSuffixArray[fileNameWithoutSuffixArray.length - 1]) {
         case 'omi':
+        case 'eno':
             console.log(fileNameWithoutSuffixArray);
             console.log(omil);
+            // convert jsx file
             omil({
                 type: 'extension',
                 options: null,
@@ -72,18 +101,16 @@ const readFileName = (path, fileContext) => {
                     writeJsxFileContext(path, data);
                 }
             });
-            break;
-        case 'eno':
-            console.log(fileNameWithoutSuffixArray);
-            console.log(omil);
+            // convert html file
             omil({
                 type: 'extension',
+                file: 'html',
                 options: null,
                 source: fileContext,
                 callback(data) {
                     console.log(data)
                     // create jsx file and write component jsx 
-                    writeJsxFileContext(path, data);
+                    writeHtmlFileContext(path, data);
                 }
             });
             break;
