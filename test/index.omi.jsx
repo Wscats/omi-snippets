@@ -14,7 +14,7 @@ const myEno = class extends WeElement {
 
   install() {
     this.data = {
-      name: "Eno Yao"
+      name: "Eno Yao !"
     };
   }
 };

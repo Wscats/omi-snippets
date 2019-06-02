@@ -9,6 +9,7 @@ const {
 const transformJsx = require('omil/libs/scripts/extension/transform');
 const prettier = require('prettier');
 const os = require('os');
+const { exec } = require('child_process');
 
 const readFileContext = (path) => {
     return fs.readFileSync(path).toString();
@@ -77,9 +78,9 @@ const readFileName = (path, fileContext) => {
     const platform = os.platform();
     let fileNameWithoutSuffix;
     if (platform === 'win32') {
-        fileNameWithoutSuffix = path.match(/\\([^\\]+)\.(omi|eno|scss|jsx)$/g);
+        fileNameWithoutSuffix = path.match(/\\([^\\]+)\.(omi|eno|scss|jsx|ts)$/g);
     } else {
-        fileNameWithoutSuffix = path.match(/\/([^\/]+)\.(omi|eno|scss|jsx)$/g);
+        fileNameWithoutSuffix = path.match(/\/([^\/]+)\.(omi|eno|scss|jsx|ts)$/g);
     }
 
     console.log(platform, fileNameWithoutSuffix);
@@ -118,6 +119,16 @@ const readFileName = (path, fileContext) => {
             console.log(fileNameWithoutSuffixArray);
             console.log(path, fileContext);
             writeJsxFileContext2(path, fileContext);
+            break;
+        case 'ts':
+            console.log('typescript', path);
+            exec(`tsc ${path}`, (err, stdout, stderr) => {
+                if (err) {
+                console.error(err);
+                return;
+                }
+                console.log(stdout);
+            });
             break;
         case 'scss':
             compileSass(fileContext).then((data) => {

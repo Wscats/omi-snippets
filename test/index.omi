@@ -8,7 +8,7 @@
 export default {
     install(){
         this.data = {
-            name: 'Eno Yao',
+            name: 'Eno Yao !',
         }
     }
 }
