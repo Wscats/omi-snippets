@@ -28,6 +28,55 @@ vsce package
 ```
 ![wscats](https://wscats.github.io/omi-snippets/images/omi-snippets.gif)
 
+This will setup a basic `webpack` + [omil](https://github.com/Wscats/omil) project for you, with `*.omi` or `*.eno` files and hot-reloading working out of the box!
+
+For example, you can create `test.omi` in Visual Studio Code before install [Omi Snippets](https://marketplace.visualstudio.com/items?itemName=Wscats.omi-snippets)
+```html
+<!-- test.omi -->
+<template name="my-eno">
+    <div>
+        {this.data.name}
+    </div>
+</template>
+<script>
+// import axios from 'axios';
+export default {
+    install(){
+        this.data = {
+            name: 'Eno Yao',
+        }
+    }
+}
+</script>
+<style lang="scss">
+    div{
+        color:red;
+    }
+</style>
+```
+
+It will be converted into `test.omi.jsx` and `test.omi.html`
+```jsx
+// test.omi.jsx
+import { WeElement, define, h } from "omi";
+// import axios from 'axios';
+const myEno = class extends WeElement {
+  css() {
+    return `div{color:red}`;
+  }
+  render() {
+    return h("div", null, this.data.name);
+  }
+  install() {
+    this.data = {
+      name: "Eno Yao"
+    };
+  }
+};
+define("my-eno", myEno);
+```
+
+
 # Code Snippets
 
 |trigger|snippet|

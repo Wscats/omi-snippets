@@ -1,27 +1,20 @@
 import { WeElement, define, h } from "omi";
 
-import axios from "axios";
+// import axios from 'axios';
 
 const myEno = class extends WeElement {
   css() {
-    return `div{color:red}div p{font-size:14px}
+    return `div{color:red}
 `;
   }
 
   render() {
-    return h(
-      "div",
-      null,
-      "HELLO WORLD UUUUU ",
-      this.data.name,
-      h("p", null, "ABC")
-    );
+    return h("div", null, this.data.name);
   }
 
   install() {
     this.data = {
-      name: "yao",
-      skill: ["ps"]
+      name: "Eno Yao"
     };
   }
 };

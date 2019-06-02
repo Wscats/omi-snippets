@@ -1,17 +1,14 @@
 <template name="my-eno">
     <div>
-        HELLO WORLD UUUUU {this.data.name}
-        <p>ABC</p>
+        {this.data.name}
     </div>
 </template>
 <script>
-import axios from 'axios';
+// import axios from 'axios';
 export default {
     install(){
         this.data = {
-            name: 'yao',
-            skill: ['ps']
-
+            name: 'Eno Yao',
         }
     }
 }
@@ -19,8 +16,5 @@ export default {
 <style lang="scss">
     div{
         color:red;
-        p{
-            font-size:14px;
-        }
     }
 </style>
