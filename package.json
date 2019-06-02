@@ -1,7 +1,8 @@
 {
   "name": "omi-snippets",
+  "displayName": "Omi Snippets",
   "description": "A beautify Visual Studio Code extension for .omi or .eno file",
-  "version": "0.3.7",
+  "version": "0.3.8",
   "author": "Eno Yao",
   "publisher": "Wscats",
   "icon": "logos/omi-logo.png",
@@ -25,6 +26,20 @@
     "xie"
   ],
   "activationEvents": [
+    "onLanguage:html",
+    "onLanguage:laravel-blade",
+    "onLanguage:razor",
+    "onLanguage:vue",
+    "onLanguage:blade",
+    "onLanguage:pug",
+    "onLanguage:jade",
+    "onLanguage:handlebars",
+    "onLanguage:php",
+    "onLanguage:twig",
+    "onLanguage:md",
+    "onLanguage:nunjucks",
+    "onLanguage:javascript",
+    "onLanguage:javascriptreact",
     "*"
   ],
   "main": "./extension",
@@ -43,25 +58,16 @@
     "email": "kalone.cool@gmail.com"
   },
   "categories": [
-    "Programming Languages"
+    "Programming Languages",
+    "Snippets"
   ],
   "contributes": {
-    "iconThemes": [
-      {
-        "id": "vscode-icons",
-        "label": "VSCode Icons",
-        "path": "./icons/icons.json"
-      }
-    ],
     "languages": [
       {
         "id": "omi",
         "aliases": [
-          "Eno",
-          "Omi.js",
-          "omi",
-          "Eno.js",
-          "eno"
+          "HTML",
+          "html"
         ],
         "extensions": [
           ".omi"
@@ -71,6 +77,7 @@
       {
         "id": "eno",
         "aliases": [
+          "html",
           "Omi.js",
           "omi",
           "Eno.js",
@@ -87,10 +94,7 @@
       {
         "language": "omi",
         "scopeName": "text.html.omi",
-        "path": "./syntaxes/omi.tmLanguage.json",
-        "embeddedLanguages": {
-          "meta.embedded.block.javascript": "source.js"
-        }
+        "path": "./syntaxes/omi.tmLanguage.json"
       },
       {
         "language": "eno",
@@ -138,7 +142,7 @@
     "@babel/core": "^7.4.4",
     "@babel/preset-env": "^7.4.5",
     "@babel/preset-react": "^7.0.0",
-    "omil": "^1.4.3",
+    "omil": "^1.4.7",
     "prettier": "1.17.1"
   }
 }

@@ -20,29 +20,27 @@
             render
         } = omi;
 
-        // JS
-        var a = 'abc'
 
-        const enoname = class extends WeElement {
-            render() {
-                return h("div", null, h("p", null, "123"));
-            }
+        const myEno = class extends WeElement {
             css() {
-                return `
-                    p{
-                        color:red;
-                        span{
-                            font-size:14px
-                        }
-                    }
-                `
+                return `div {
+  color: red; }
+  div p {
+    font-size: 14px; }
+`;
             }
+            render() {
+                return h("div", null, "HELLO WORLD ", this.data.name);
+            }
+
             install() {
                 this.data = {
-                }
+                    name: "yao"
+                };
             }
-        }
-        define('my-eno', enoname);
+        };
+
+        define("my-eno", myEno);
         render(h('my-eno'), 'body')
     </script>
 </body>

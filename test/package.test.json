@@ -1,0 +1,145 @@
+{
+    "name": "omi-snippets",
+    "description": "A beautify Visual Studio Code extension for .omi or .eno file",
+    "version": "0.3.7",
+    "author": "Eno Yao",
+    "publisher": "Wscats",
+    "icon": "logos/omi-logo.png",
+    "keywords": [
+      "omi",
+      "omijs",
+      "omi.js",
+      "eno",
+      "eno yao",
+      "yao",
+      "wscats",
+      "yjl",
+      "scss",
+      "sass",
+      "lemon",
+      "laoyao",
+      "one",
+      "jing",
+      "jialong",
+      "yaojialong",
+      "xie"
+    ],
+    "activationEvents": [
+      "*"
+    ],
+    "main": "./extension",
+    "scripts": {
+      "build": "vsce package"
+    },
+    "engines": {
+      "vscode": "^1.33.0"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/Wscats/omi-snippets"
+    },
+    "bugs": {
+      "url": "https://github.com/Wscats/omi-snippets/issues",
+      "email": "kalone.cool@gmail.com"
+    },
+    "categories": [
+      "Programming Languages"
+    ],
+    "contributes": {
+      "iconThemes": [
+        {
+          "id": "vscode-icons",
+          "label": "VSCode Icons",
+          "path": "./icons/icons.json"
+        }
+      ],
+      "languages": [
+        {
+          "id": "omi",
+          "aliases": [
+            "Eno",
+            "Omi.js",
+            "omi",
+            "Eno.js",
+            "eno"
+          ],
+          "extensions": [
+            ".omi"
+          ],
+          "configuration": "./omi.configuration.json"
+        },
+        {
+          "id": "eno",
+          "aliases": [
+            "Omi.js",
+            "omi",
+            "Eno.js",
+            "eno",
+            "yao"
+          ],
+          "extensions": [
+            ".eno"
+          ],
+          "configuration": "./omi.configuration.json"
+        }
+      ],
+      "grammars": [
+        {
+          "language": "omi",
+          "scopeName": "text.html.omi",
+          "path": "./syntaxes/omi.tmLanguage.json",
+          "embeddedLanguages": {
+            "meta.embedded.block.javascript": "source.js"
+          }
+        },
+        {
+          "language": "eno",
+          "scopeName": "text.html.omi",
+          "path": "./syntaxes/omi.tmLanguage.json"
+        }
+      ],
+      "snippets": [
+        {
+          "language": "omi",
+          "path": "./snippets/omi.json"
+        },
+        {
+          "language": "omi",
+          "path": "./snippets/js.json"
+        },
+        {
+          "language": "omi",
+          "path": "./snippets/html.json"
+        },
+        {
+          "language": "omi",
+          "path": "./snippets/css.json"
+        },
+        {
+          "language": "eno",
+          "path": "./snippets/omi.json"
+        },
+        {
+          "language": "eno",
+          "path": "./snippets/js.json"
+        },
+        {
+          "language": "eno",
+          "path": "./snippets/html.json"
+        },
+        {
+          "language": "eno",
+          "path": "./snippets/css.json"
+        }
+      ]
+    },
+    "license": "MIT",
+    "dependencies": {
+      "@babel/core": "^7.4.4",
+      "@babel/preset-env": "^7.4.5",
+      "@babel/preset-react": "^7.0.0",
+      "omil": "^1.4.3",
+      "prettier": "1.17.1"
+    }
+  }
+  

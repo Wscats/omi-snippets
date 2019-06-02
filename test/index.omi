@@ -1,35 +1,25 @@
-<template lang="html">
+<template name="my-eno">
     <div>
-    <p name={this.data.name}>Hello World</p>
-        <!-- JSX -->
+        HELLO WORLD {this.data.name}
     </div>
 </template>
 <script>
-// JS avc
-var a = 'abc'
+import axios from 'axios';
 export default {
-    install() {
+    install(){
         this.data = {
-            name:'yao',
-            skill:'ps',
-            obj: {
-            }
+            name: 'yao',
+            skill: ['ps']
+
         }
     }
 }
-
 </script>
 <style lang="scss">
-$color : red;
-$size : 20px;
-p{
-    color:$color;
-    span{
-        font-size:$size;
-        span{
-            width:$size*20;
+    div{
+        color:red;
+        p{
+            font-size:14px;
         }
     }
-    
-}
 </style>

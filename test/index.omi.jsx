@@ -3,39 +3,28 @@ import {
   WeElement,
   // when you use component, you should define
   define,
-  // JSX
-  h,
-  // html
-  htm,
-  html
+  h
 } from "omi";
 
-// JS avc
-var a = "abc";
+import axios from "axios";
 
-export default class extends WeElement {
+const myEno = class extends WeElement {
   css() {
-    return `p {
+    return `div {
   color: red; }
-  p span {
-    font-size: 20px; }
-    p span span {
-      width: 400px; }
+  div p {
+    font-size: 14px; }
 `;
   }
   render() {
-    return html`
-      <div>
-        <p name="{this.data.name}">Hello World</p>
-      </div>
-    `;
+    return h("div", null, "HELLO WORLD ", this.data.name);
   }
 
   install() {
     this.data = {
       name: "yao",
-      skill: "ps",
-      obj: {}
+      skill: ["ps"]
     };
   }
-}
+};
+define("my-eno", myEno);
