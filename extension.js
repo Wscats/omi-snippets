@@ -78,9 +78,9 @@ const readFileName = (path, fileContext) => {
     const platform = os.platform();
     let fileNameWithoutSuffix;
     if (platform === 'win32') {
-        fileNameWithoutSuffix = path.match(/\\([^\\]+)\.(omi|eno|scss|jsx|ts)$/g);
+        fileNameWithoutSuffix = path.match(/\\([^\\]+)\.(omi|eno|scss|jsx|ts|tsx)$/g);
     } else {
-        fileNameWithoutSuffix = path.match(/\/([^\/]+)\.(omi|eno|scss|jsx|ts)$/g);
+        fileNameWithoutSuffix = path.match(/\/([^\/]+)\.(omi|eno|scss|jsx|ts|tsx)$/g);
     }
 
     console.log(platform, fileNameWithoutSuffix);
@@ -121,6 +121,7 @@ const readFileName = (path, fileContext) => {
             writeJsxFileContext2(path, fileContext);
             break;
         case 'ts':
+        case 'tsx':
             console.log('typescript', path);
             exec(`tsc ${path}`, (err, stdout, stderr) => {
                 if (err) {
