@@ -16,17 +16,17 @@ const readFileContext = (path) => {
 }
 
 // JSX
-const writeJsxFileContext = (path, data) => {
+const writeJsFileContext = (path, data) => {
     const code = prettier.format(data, {
         parser: "babel",
     });
-    fs.writeFile(`${path}.jsx`, code, () => {
+    fs.writeFile(`${path}.js`, code, () => {
         console.log('写入成功');
     });
 }
 
 // JSX
-const writeJsxFileContext2 = async (path, data) => {
+const writeJsxFileContext = async (path, data) => {
     const code = prettier.format(data, {
         parser: "babel",
     });
@@ -99,7 +99,7 @@ const readFileName = (path, fileContext) => {
                 callback(data) {
                     console.log(data)
                     // create jsx file and write component jsx 
-                    writeJsxFileContext(path, data);
+                    writeJsFileContext(path, data);
                 }
             });
             // convert html file
@@ -118,7 +118,7 @@ const readFileName = (path, fileContext) => {
         case 'jsx':
             console.log(fileNameWithoutSuffixArray);
             console.log(path, fileContext);
-            writeJsxFileContext2(path, fileContext);
+            writeJsxFileContext(path, fileContext);
             break;
         case 'ts':
         case 'tsx':

@@ -1,6 +1,6 @@
 <template name="my-eno">
     <div>
-        {this.data.name}
+        {this.data.name}12
     </div>
 </template>
 <script>
@@ -8,7 +8,7 @@
 export default {
     install(){
         this.data = {
-            name: 'Eno Yao !',
+            name: 'Eno Yao !)))))',
         }
     }
 }
@@ -16,5 +16,8 @@ export default {
 <style lang="scss">
     div{
         color:red;
+        p{
+            font-size:14px;
+        }
     }
 </style>
