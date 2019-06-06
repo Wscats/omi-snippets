@@ -147,6 +147,7 @@ function activate(context) {
     console.log(context)
     // context.subscriptions.push(vscode.languages.setLanguageConfiguration('html'));
     // when you click ctrl+s, fn will action
+    
     vscode.workspace.onDidSaveTextDocument((document) => {
         const {
             fileName
