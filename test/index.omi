@@ -1,16 +1,23 @@
 <template name="my-eno">
     <div>
-        {this.data.name}12345
-        {this.data.name}12
+        {this.data.name}
+        <button onClick={this.testClick.bind(this)}>ok</button>
     </div>
 </template>
 <script>
 // import axios from 'axios';
+// M
+const style = 'a{color:red}'
 export default {
+    static css = style
     install(){
         this.data = {
-            name: 'Eno Yao !)))))',
+            name: '123',
         }
+    }
+    testClick(){
+        this.data.name = 456;
+        this.update();
     }
 }
 </script>

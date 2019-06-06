@@ -59,11 +59,9 @@ It will be converted into `test.omi.jsx` and `test.omi.html`
 ```jsx
 // test.omi.jsx
 import { WeElement, define, h } from "omi";
-// import axios from 'axios';
+import style from './style.css';
 const myEno = class extends WeElement {
-  css() {
-    return `div{color:red}`;
-  }
+  static css =  style + `div{color:red}`;
   render() {
     return h("div", null, this.data.name);
   }
