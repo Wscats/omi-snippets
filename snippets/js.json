@@ -1,61 +1,61 @@
 {
   "import": {
-    "prefix": "imp",
+    "prefix": "import",
     "body": "import ${2:moduleName} from '${1:module}';$0",
     "description": "Imports entire module statement in ES6 syntax"
   },
   "importNoModuleName": {
-    "prefix": "imn",
+    "prefix": "import",
     "body": "import '${1:module}';$0",
     "description": "Imports entire module in ES6 syntax without module name"
   },
   "importDestructing": {
-    "prefix": "imd",
+    "prefix": "import",
     "body": "import { $2 } from '${1:module}';$0",
     "description": "Imports only a portion of the module in ES6 syntax"
   },
   "importEverything": {
-    "prefix": "ime",
+    "prefix": "import",
     "body": "import * as ${2:alias} from '${1:module}';$0",
     "description": "Imports everything as alias from the module in ES6 syntax"
   },
   "importAs": {
-    "prefix": "ima",
+    "prefix": "import",
     "body": "import { ${2:originalName} as ${3:alias} } from '${1:module}';$0",
     "description": "Imports a specific portion of the module by assigning a local alias in ES6 syntax"
   },
   "require": {
-    "prefix": "rqr",
+    "prefix": "require",
     "body": "require('${1:package}');",
     "description": "Require a package"
   },
   "moduleExports": {
-    "prefix": "mde",
+    "prefix": "module.exports",
     "body": "module.exports = {\n\t$0\n};\n",
     "description": "Module exports from Common JS, node syntax at ES6"
   },
   "exportNamedFunction": {
-    "prefix": "enf",
+    "prefix": "export",
     "body": "export const ${1:functionName} = (${2:params}) => {\n\t$0\n};\n",
     "description": "Export named function in ES6 syntax"
   },
   "exportDefaultFunction": {
-    "prefix": "edf",
+    "prefix": "export default",
     "body": "export default (${1:params}) => {\n\t$0\n};\n",
     "description": "Export default function in ES6 syntax"
   },
   "exportClass": {
-    "prefix": "ecl",
+    "prefix": "export default",
     "body": "export default class ${1:className} {\n\t$0\n};\n",
     "description": "Export default class in ES6 syntax"
   },
   "exportClassExtends": {
-    "prefix": "ece",
+    "prefix": "export default",
     "body": "export default class ${1:className} extends ${2:baseclassName} {\n\t$0\n};\n",
     "description": "Export default class which extends a base one in ES6 syntax"
   },
   "constructor": {
-    "prefix": "con",
+    "prefix": "constructor",
     "body": "constructor(${1:params}) {\n\t${0}\n}",
     "description": "Add default constructor in a class in ES6 syntax"
   },
@@ -208,7 +208,7 @@
 
   
   "var statement": {
-    "prefix": "v",
+    "prefix": "var",
     "body": "var ${0}",
     "description": "var statement"
   },
@@ -218,7 +218,7 @@
     "description": "var assignment"
   },
   "let statement": {
-    "prefix": "l",
+    "prefix": "let",
     "body": "let ${0}",
     "description": "let statement"
   },
@@ -233,7 +233,7 @@
     "description": "destructuring let assignment"
   },
   "const statement": {
-    "prefix": "co",
+    "prefix": "const",
     "body": "const ${0}",
     "description": "const statement"
   },
@@ -254,7 +254,7 @@
     "description": "if statement"
   },
   "else statement": {
-    "prefix": "el",
+    "prefix": "else",
     "body": "else {\n\t${0}\n}",
     "description": "else statement"
   },
@@ -264,7 +264,7 @@
     "description": "if/else statement"
   },
   "else if statement": {
-    "prefix": "ei",
+    "prefix": "else if",
     "body": "else if (${1:condition}) {\n\t${0}\n}",
     "description": "else if statement"
   },
@@ -274,7 +274,7 @@
     "description": "ternary operator"
   },
   "for loop": {
-    "prefix": "fl",
+    "prefix": "for",
     "body": "for (let ${1:i} = 0, ${2:len} = ${3:iterable}.length; ${1:i} < ${2:len}; ${1:i}++) {\n\t${0}\n}",
     "description": "for loop"
   },
@@ -294,12 +294,12 @@
     "description": "for of loop (ES6)"
   },
   "while loop": {
-    "prefix": "wl",
+    "prefix": "while",
     "body": "while (${1:condition}) {\n\t${0}\n}",
     "description": "while loop"
   },
   "try/catch": {
-    "prefix": "tc",
+    "prefix": "try catch",
     "body": "try {\n\t${0}\n} catch (${1:err}) {\n\t\n}",
     "description": "try/catch"
   },
@@ -314,13 +314,13 @@
     "description": "try/catch/finally"
   },
   "switch case": {
-    "prefix": "sw",
+    "prefix": "switch case",
     "body": "switch (${1:expr}) {\n\tcase ${2:value}:\n\t\treturn $0;\n\tdefault:\n\t\treturn;\n}",
     "description": "switch case"
   },
   // Functions
   "anonymous function": {
-    "prefix": "f",
+    "prefix": "function",
     "body": "function (${1:arguments}) {\n\t${0}\n}",
     "description": "anonymous function"
   },
@@ -639,7 +639,7 @@
   },
   // Console
   "console.log": {
-    "prefix": "cl",
+    "prefix": "console.log",
     "body": "console.log(${0});",
     "description": "console.log"
   },
@@ -670,17 +670,17 @@
   },
   // Timers
   "setTimeout": {
-    "prefix": "st",
+    "prefix": "setTimeout",
     "body": "setTimeout(() => {\n\t${0}\n}, ${1:delay});",
     "description": "setTimeout"
   },
   "setInterval": {
-    "prefix": "si",
+    "prefix": "setInterval",
     "body": "setInterval(() => {\n\t${0}\n}, ${1:delay});",
     "description": "setInterval"
   },
   "setImmediate": {
-    "prefix": "sim",
+    "prefix": "setImmediate",
     "body": "setImmediate(() => {\n\t${0}\n});",
     "description": "setImmediate"
   },
@@ -691,7 +691,7 @@
   },
   // Miscellaneous
   "insert 'use strict' statement": {
-    "prefix": "us",
+    "prefix": "use strict",
     "body": "'use strict';",
     "description": "insert 'use strict' statement"
   }
