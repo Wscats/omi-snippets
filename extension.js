@@ -15,8 +15,15 @@ const readFileContext = (path) => {
     return fs.readFileSync(path).toString();
 }
 
+// /xxx/xxx.omi => /xxx/xxx
+const handleFilePath = (path, length) => {
+    return path = path.substring(0, path.length - length);
+}
+
 // JSX
 const writeJsFileContext = (path, data) => {
+    path = handleFilePath(path, 4);
+    console.log(path);
     const code = prettier.format(data, {
         parser: "babel",
     });
@@ -39,6 +46,7 @@ const writeJsxFileContext = async (path, data) => {
 
 // SCSS
 const writeScssFileContext = (path, data) => {
+    path = handleFilePath(path, 5);
     const code = prettier.format(data, {
         parser: "css",
     });
@@ -49,6 +57,7 @@ const writeScssFileContext = (path, data) => {
 
 // HTML
 const writeHtmlFileContext = (path, data) => {
+    path = handleFilePath(path, 4);
     const code = prettier.format(`
         <!DOCTYPE html>
         <html lang="en">
@@ -65,13 +74,13 @@ const writeHtmlFileContext = (path, data) => {
         </body>
         </html>
     `, {
-        parser: "html",
-    });
-    fs.writeFile(`${path}.html`, 
-    code
-    , () => {
-        console.log('写入成功');
-    });
+            parser: "html",
+        });
+    fs.writeFile(`${path}.html`,
+        code
+        , () => {
+            console.log('写入成功');
+        });
 }
 
 const readFileName = (path, fileContext) => {
@@ -86,7 +95,9 @@ const readFileName = (path, fileContext) => {
     console.log(platform, fileNameWithoutSuffix);
     const fileNameWithoutSuffixArray = fileNameWithoutSuffix[0].split('.');
     console.log(fileNameWithoutSuffixArray[fileNameWithoutSuffixArray.length - 1]);
-    switch (fileNameWithoutSuffixArray[fileNameWithoutSuffixArray.length - 1]) {
+    // omi
+    const fileSuffix = fileNameWithoutSuffixArray[fileNameWithoutSuffixArray.length - 1];
+    switch (fileSuffix) {
         case 'omi':
         case 'eno':
             console.log(fileNameWithoutSuffixArray);
@@ -125,8 +136,8 @@ const readFileName = (path, fileContext) => {
             console.log('typescript', path);
             exec(`tsc ${path}`, (err, stdout, stderr) => {
                 if (err) {
-                console.error(err);
-                return;
+                    console.error(err);
+                    return;
                 }
                 console.log(stdout);
             });
@@ -147,7 +158,7 @@ function activate(context) {
     console.log(context)
     // context.subscriptions.push(vscode.languages.setLanguageConfiguration('html'));
     // when you click ctrl+s, fn will action
-    
+
     vscode.workspace.onDidSaveTextDocument((document) => {
         const {
             fileName
