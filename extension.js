@@ -11,6 +11,14 @@ const prettier = require('prettier');
 const os = require('os');
 const { exec } = require('child_process');
 
+// fileType => .omi .scss .html
+const fileType = (filename) => {
+    const index1 = filename.lastIndexOf(".");
+    const index2 = filename.length;
+    const type = filename.substring(index1, index2);
+    return type;
+}
+
 const readFileContext = (path) => {
     return fs.readFileSync(path).toString();
 }
@@ -84,23 +92,26 @@ const writeHtmlFileContext = (path, data) => {
 }
 
 const readFileName = (path, fileContext) => {
-    const platform = os.platform();
-    let fileNameWithoutSuffix;
-    if (platform === 'win32') {
-        fileNameWithoutSuffix = path.match(/\\([^\\]+)\.(omi|eno|scss|jsx|ts|tsx)$/g);
-    } else {
-        fileNameWithoutSuffix = path.match(/\/([^\/]+)\.(omi|eno|scss|jsx|ts|tsx)$/g);
-    }
+    // const platform = os.platform();
+    // let fileNameWithoutSuffix;
+    // if (platform === 'win32') {
+    //     fileNameWithoutSuffix = path.match(/\\([^\\]+)\.(omi|eno|scss|jsx|ts|tsx)$/g);
+    // } else {
+    //     fileNameWithoutSuffix = path.match(/\/([^\/]+)\.(omi|eno|scss|jsx|ts|tsx)$/g);
+    // }
 
-    console.log(platform, fileNameWithoutSuffix);
-    const fileNameWithoutSuffixArray = fileNameWithoutSuffix[0].split('.');
-    console.log(fileNameWithoutSuffixArray[fileNameWithoutSuffixArray.length - 1]);
+    // console.log(platform, fileNameWithoutSuffix);
+    // const fileNameWithoutSuffixArray = fileNameWithoutSuffix[0].split('.');
+    // console.log(fileNameWithoutSuffixArray[fileNameWithoutSuffixArray.length - 1]);
+
+    let fileSuffix = fileType(path);
+    console.log(fileSuffix);
     // omi
-    const fileSuffix = fileNameWithoutSuffixArray[fileNameWithoutSuffixArray.length - 1];
+    // const fileSuffix = fileNameWithoutSuffixArray[fileNameWithoutSuffixArray.length - 1];
     switch (fileSuffix) {
-        case 'omi':
-        case 'eno':
-            console.log(fileNameWithoutSuffixArray);
+        case '.omi':
+        case '.eno':
+            // console.log(fileNameWithoutSuffixArray);
             console.log(omil);
             // convert jsx file
             omil({
@@ -126,13 +137,13 @@ const readFileName = (path, fileContext) => {
                 }
             });
             break;
-        case 'jsx':
-            console.log(fileNameWithoutSuffixArray);
+        case '.jsx':
+            // console.log(fileNameWithoutSuffixArray);
             console.log(path, fileContext);
             writeJsxFileContext(path, fileContext);
             break;
-        case 'ts':
-        case 'tsx':
+        case '.ts':
+        case '.tsx':
             console.log('typescript', path);
             exec(`tsc ${path}`, (err, stdout, stderr) => {
                 if (err) {
@@ -142,7 +153,7 @@ const readFileName = (path, fileContext) => {
                 console.log(stdout);
             });
             break;
-        case 'scss':
+        case '.scss':
             compileSass(fileContext).then((data) => {
                 console.log(data.text);
                 writeScssFileContext(path, data.text);
@@ -151,7 +162,7 @@ const readFileName = (path, fileContext) => {
         default:
             break;
     }
-    return fileNameWithoutSuffix;
+    // return fileNameWithoutSuffix;
 }
 
 function activate(context) {

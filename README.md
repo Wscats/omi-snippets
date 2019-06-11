@@ -55,7 +55,7 @@ export default {
 </style>
 ```
 
-It will be converted into `test.omi.jsx` and `test.omi.html`
+It will be converted into `test.js` and `test.html`
 ```jsx
 // test.omi.jsx
 import { WeElement, define, h } from "omi";
