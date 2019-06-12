@@ -3,3 +3,8 @@
     123    hello world123456
     </div>
 </template>
+<script>
+export default {
+    
+}
+</script>

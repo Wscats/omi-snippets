@@ -8,17 +8,17 @@
 // import axios from 'axios';
 // M
 const style = 'a{color:red}'
-export default {
-    static css = style
+export default class {
     install(){
         this.data = {
             name: '123',
         }
     }
     testClick(){
-        this.data.name = 456;
+        this.data.name = 789;
         this.update();
     }
+    a(){}
 }
 </script>
 <style lang="scss">

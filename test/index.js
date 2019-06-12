@@ -5,6 +5,8 @@ import { WeElement, define, h } from "omi";
 const style = "a{color:red}";
 
 const myEno = class extends WeElement {
+  static css = `div{color:red}div p{font-size:14px}
+`;
   render() {
     return h(
       "div",
@@ -20,24 +22,16 @@ const myEno = class extends WeElement {
     );
   }
 
-  static css =
-    `
-    div{
-        color:red;
-        p{
-            font-size:14px;
-        }
-    }
-` + style;
   install() {
     this.data = {
       name: "123"
     };
   }
   testClick() {
-    this.data.name = 456;
+    this.data.name = 789;
     this.update();
   }
+  a() {}
 };
 
 define("my-eno", myEno);
