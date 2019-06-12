@@ -114,6 +114,8 @@ The `<script>` block uses the syntax highlighting currently active for you norma
 - [vscode-javascript](https://github.com/xabikos/vscode-javascript)
 - [vscode-javascript-snippets](https://github.com/nathanchapman/vscode-javascript-snippets)
 - [vsc-css-snippets](https://github.com/joy-yu/vsc-css-snippets)
+- [prettier](https://prettier.io/)
+- [babel](https://babeljs.io/)
 
 # License
 
