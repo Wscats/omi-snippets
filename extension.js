@@ -92,22 +92,8 @@ const writeHtmlFileContext = (path, data) => {
 }
 
 const readFileName = (path, fileContext) => {
-    // const platform = os.platform();
-    // let fileNameWithoutSuffix;
-    // if (platform === 'win32') {
-    //     fileNameWithoutSuffix = path.match(/\\([^\\]+)\.(omi|eno|scss|jsx|ts|tsx)$/g);
-    // } else {
-    //     fileNameWithoutSuffix = path.match(/\/([^\/]+)\.(omi|eno|scss|jsx|ts|tsx)$/g);
-    // }
-
-    // console.log(platform, fileNameWithoutSuffix);
-    // const fileNameWithoutSuffixArray = fileNameWithoutSuffix[0].split('.');
-    // console.log(fileNameWithoutSuffixArray[fileNameWithoutSuffixArray.length - 1]);
-
     let fileSuffix = fileType(path);
     console.log(fileSuffix);
-    // omi
-    // const fileSuffix = fileNameWithoutSuffixArray[fileNameWithoutSuffixArray.length - 1];
     switch (fileSuffix) {
         case '.omi':
         case '.eno':
@@ -137,22 +123,22 @@ const readFileName = (path, fileContext) => {
                 }
             });
             break;
-        case '.jsx':
-            // console.log(fileNameWithoutSuffixArray);
-            console.log(path, fileContext);
-            writeJsxFileContext(path, fileContext);
-            break;
-        case '.ts':
-        case '.tsx':
-            console.log('typescript', path);
-            exec(`tsc ${path}`, (err, stdout, stderr) => {
-                if (err) {
-                    console.error(err);
-                    return;
-                }
-                console.log(stdout);
-            });
-            break;
+        // case '.jsx':
+        //     // console.log(fileNameWithoutSuffixArray);
+        //     console.log(path, fileContext);
+        //     writeJsxFileContext(path, fileContext);
+        //     break;
+        // case '.ts':
+        // case '.tsx':
+        //     console.log('typescript', path);
+        //     exec(`tsc ${path}`, (err, stdout, stderr) => {
+        //         if (err) {
+        //             console.error(err);
+        //             return;
+        //         }
+        //         console.log(stdout);
+        //     });
+        //     break;
         case '.scss':
             compileSass(fileContext).then((data) => {
                 console.log(data.text);
@@ -160,6 +146,7 @@ const readFileName = (path, fileContext) => {
             })
             break;
         default:
+            console.log('Not omi file!')
             break;
     }
     // return fileNameWithoutSuffix;
