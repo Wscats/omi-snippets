@@ -1,19 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eno Yao</title>
+  </head>
+  <body>
+    <script src="https://tencent.github.io/omi/packages/omi/dist/omi.js"></script>
+    <script>
+      const { WeElement, define, html, h, render } = omi;
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
+      // import axios from 'axios';
+      // M
+      const style = "a{color:red}";
 
-<body>
-    <!-- <script type="module" src="./omi.js"></script> -->
-    <script type="module">
-        import omi from './omi.js'
-        console.log(omi)
+      const myEno = class extends WeElement {
+        render() {
+          return h(
+            "div",
+            null,
+            this.data.name,
+            h(
+              "button",
+              {
+                onClick: this.testClick.bind(this)
+              },
+              "ok"
+            )
+          );
+        }
+
+        static css =
+          `
+    div{
+        color:red;
+        p{
+            font-size:14px;
+        }
+    }
+` + style;
+        install() {
+          this.data = {
+            name: "123"
+          };
+        }
+        testClick() {
+          this.data.name = 456;
+          this.update();
+        }
+      };
+
+      define("my-eno", myEno);
+
+      render(
+        html`
+          <my-eno />
+        `,
+        "body"
+      );
     </script>
-</body>
-
+  </body>
 </html>

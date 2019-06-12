@@ -8,7 +8,7 @@
         "prefix": "export default",
         "scope": "javascript,typescript",
         "body": [
-            "export default {",
+            "export default class {",
             "\tcss() {",
             "\t\treturn (",
             "\t\t\t${2}",
@@ -26,7 +26,7 @@
     "module.exports": {
         "prefix": "module.exports",
         "body": [
-            "module.exports = {",
+            "module.exports = class {",
             "\tcss() {",
             "\t\treturn (",
             "\t\t\t${2}",
@@ -52,51 +52,47 @@
         ],
         "description": "Omi function struct"
     },
-    "css": {
-        "prefix": "css",
-        "body": [
-            "css(${1}) {",
-            "\treturn (",
-            "\t\t${2}",
-            "\t)",
-            "}"
-        ],
-        "description": "Omi css struct"
-    },
     "templateLang": {
         "prefix": "templateLang",
         "scope": "html",
         "body": [
-            "<template lang=\"$1\">",
-            "\t<div$2>",
+            "<template lang=\"html\">",
+            "\t<div$1>",
             "\t\t$0",
             "\t</div>",
             "</template>"
         ],
         "description": "Template element"
     },
-    "script": {
+    "template": {
+        "prefix": "template",
+        "scope": "html",
+        "body": [
+            "<template name=\"component-name\">",
+            "\t<div$1>",
+            "\t\t$0",
+            "\t</div>",
+            "</template>"
+        ],
+        "description": "Template element"
+    },
+    "scriptExportClass": {
         "prefix": "script",
         "body": [
             "<script>",
-            "export default {",
-            "\t$1",
+            "export default class {",
+            "\tinstall() {",
+                "\t\tthis.data = {",
+                "\t\t\ttitle: \"omi$1\"",
+                "\t\t}",
+                "\t}",
             "}",
             "</script>"
         ],
         "description": "Script element"
     },
-    "styleLang": {
+	"styleLang": {
         "prefix": "styleLang",
-        "body": [
-            "<style lang=\"$1\">",
-            "\t$0",
-            "</style>"
-        ],
-        "description": "Style element with lang attribute"
-	},
-	"styleLangSass": {
-        "prefix": "styleLangSass",
         "body": [
             "<style lang=\"scss\">",
             "\t$1",
@@ -105,26 +101,27 @@
         "description": "Style element with Sass attribute"
     },
     "scaffold": {
-        "prefix": "scaffold",
+        "prefix": ["scaffold","t"],
         "body": [
-            "<template>",
+            "<template name=\"component-name\">",
             "\t<div>",
             "\t\t$0<!-- JSX -->",
+            "\t\t<p>{this.data.title}</p>",
             "\t</div>",
             "</template>",
             "<script>",
             "// JS",
-            "export default {",
+            "export default class {",
                 "\tinstall() {",
                 "\t\tthis.data = {",
-                "\t\t\t${1}",
+                "\t\t\ttitle: \"omi$1\"",
                 "\t\t}",
                 "\t}",
             "}",
             "</script>",
             "<style>",
             "/* CSS */",
-            "$2",
+            "p{color:58bc58}",
             "</style>"
         ],
         "description": "Scaffold <template><script><style>"
@@ -134,6 +131,6 @@
         "body": [
             "/* Hello I'm YJL(Eno Yao), Thank you for your use! */"
         ],
-        "description": "Style element with Sass attribute"
+        "description": "Eno Yao"
     }
 }
