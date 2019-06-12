@@ -36,7 +36,7 @@ const writeJsFileContext = (path, data) => {
         parser: "babel",
     });
     fs.writeFile(`${path}.js`, code, () => {
-        console.log('写入成功');
+        console.log('write success');
     });
 }
 
@@ -48,7 +48,7 @@ const writeJsxFileContext = async (path, data) => {
     const jsxObj = await transformJsx(code, null);
     console.log(jsxObj.code);
     fs.writeFile(`${path}.eno.jsx`, jsxObj.code, () => {
-        console.log('写入成功');
+        console.log('write success');
     });
 }
 
@@ -59,7 +59,7 @@ const writeScssFileContext = (path, data) => {
         parser: "css",
     });
     fs.writeFile(`${path}.css`, code, () => {
-        console.log('写入成功');
+        console.log('write success');
     });
 }
 
@@ -87,7 +87,7 @@ const writeHtmlFileContext = (path, data) => {
     fs.writeFile(`${path}.html`,
         code
         , () => {
-            console.log('写入成功');
+            console.log('write success');
         });
 }
 

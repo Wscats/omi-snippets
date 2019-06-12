@@ -119,9 +119,9 @@
                 "\t}",
             "}",
             "</script>",
-            "<style>",
+            "<style lang=\"scss\">",
             "/* CSS */",
-            "p{color:58bc58}",
+            "p{color:58bc58};",
             "</style>"
         ],
         "description": "Scaffold <template><script><style>"

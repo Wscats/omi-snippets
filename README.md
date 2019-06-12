@@ -33,14 +33,15 @@ This will setup a basic `webpack` + [omil](https://github.com/Wscats/omil) proje
 For example, you can create `test.omi` in Visual Studio Code before install [Omi Snippets](https://marketplace.visualstudio.com/items?itemName=Wscats.omi-snippets)
 ```html
 <!-- test.omi -->
-<template name="my-eno">
+<template name="component-name">
     <div>
         {this.data.name}
     </div>
 </template>
 <script>
-// import axios from 'axios';
-export default {
+import style from './style.css';
+export default class {
+    static css = style
     install(){
         this.data = {
             name: 'Eno Yao',
@@ -57,23 +58,27 @@ export default {
 
 It will be converted into `test.js` and `test.html`
 ```jsx
-// test.omi.jsx
+// test.js
 import { WeElement, define, h } from "omi";
-import style from './style.css';
-const myEno = class extends WeElement {
-  static css =  style + `div{color:red}`;
+import style from "./style.css";
+const componentName = class extends WeElement {
   render() {
     return h("div", null, this.data.name);
   }
+  static css =
+    `
+      div{
+          color:red;
+      }
+    ` + style;
   install() {
     this.data = {
       name: "Eno Yao"
     };
   }
 };
-define("my-eno", myEno);
+define("component-name", componentName);
 ```
-
 
 # Code Snippets
 
