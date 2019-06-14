@@ -5,27 +5,33 @@
     </div>
 </template>
 <script>
+// 123
 // import axios from 'axios';
-// M
 const style = 'a{color:red}'
 export default class {
-    install(){
+    abc = 123
+    static css = style
+    static num = 1 + 1
+    static abc = 2
+    // age = 18
+    install() {
         this.data = {
-            name: '123',
+            name: '789101112',
         }
     }
-    testClick(){
+    testClick() {
         this.data.name = 789;
         this.update();
     }
-    a(){}
+    a() { }
 }
 </script>
 <style lang="scss">
-    div{
-        color:red;
-        p{
-            font-size:14px;
+    div {
+        color: red;
+
+        p {
+            font-size: 14px;
         }
     }
 </style>
