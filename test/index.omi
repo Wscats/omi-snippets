@@ -5,7 +5,8 @@
     </div>
 </template>
 <script>
-// 123
+// 123345123
+// 456789
 // import axios from 'axios';
 const style = 'a{color:red}'
 export default class {
@@ -23,7 +24,10 @@ export default class {
         this.data.name = 789;
         this.update();
     }
-    a() { }
+    a(){
+        console.log(1)
+    }
+    css(){}
 }
 </script>
 <style lang="scss">

@@ -1,10 +1,10 @@
-var _class, _temp;
-
-import { WeElement, define, h } from "omi"; // 123
+import { WeElement, define, h } from "omi"; // 123345123
+// 456789
 // import axios from 'axios';
 
 const style = "a{color:red}";
-const myEno = ((_temp = _class = class myEno extends WeElement {
+
+class myEno extends WeElement {
   constructor(...args) {
     super(...args);
     this.abc = 123;
@@ -37,9 +37,14 @@ const myEno = ((_temp = _class = class myEno extends WeElement {
     this.update();
   }
 
-  a() {}
-}),
-(_class.css =
+  a() {
+    console.log(1);
+  }
+
+  css() {}
+}
+
+myEno.css =
   `
     div {
         color: red;
@@ -48,8 +53,7 @@ const myEno = ((_temp = _class = class myEno extends WeElement {
             font-size: 14px;
         }
     }
-` + style),
-(_class.num = 1 + 1),
-(_class.abc = 2),
-_temp);
+` + style;
+myEno.num = 1 + 1;
+myEno.abc = 2;
 define("my-eno", myEno);
