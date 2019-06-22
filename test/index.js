@@ -8,6 +8,7 @@ class myEno extends WeElement {
   constructor(...args) {
     super(...args);
     this.abc = 123;
+    this.qwesd = void 0;
   }
 
   render() {
@@ -38,22 +39,12 @@ class myEno extends WeElement {
   }
 
   a() {
-    console.log(1);
+    console.log(1123123);
   }
-
-  css() {}
 }
 
 myEno.css =
-  `
-    div {
-        color: red;
-
-        p {
-            font-size: 14px;
-        }
-    }
+  `div{color:red}div p{font-size:14px}
 ` + style;
-myEno.num = 1 + 1;
-myEno.abc = 2;
+myEno.abc = 2123;
 define("my-eno", myEno);
