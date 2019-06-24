@@ -7,14 +7,19 @@
 <script>
 // 123345123
 // 456789
-// import axios from 'axios';
+/* import axios from 'axios';*/
 const style = 'a{color:red}'
 export default class {
-    abc = 123
-    static css = style
+    // static css = style
     // static num = 1 + 1
-    static abc = 2123
+    // static abc = 2123
     // age = 18
+    // ads
+    // asasd
+    // abc = 123
+    // asd
+    // abc = 123
+    // static css = style
     install() {
         this.data = {
             name: '789101112',

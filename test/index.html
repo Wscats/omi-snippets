@@ -8,16 +8,12 @@
   <body>
     <script src="https://tencent.github.io/omi/packages/omi/dist/omi.js"></script>
     <script>
-      const { WeElement, define, html, h, render } = omi; // 123345123
-      // 456789
-      // import axios from 'axios';
-
+      const { WeElement, define, html, h, render } = omi;
       const style = "a{color:red}";
 
       class myEno extends WeElement {
         constructor(...args) {
           super(...args);
-          this.abc = 123;
           this.qwesd = void 0;
         }
 
@@ -36,7 +32,6 @@
           );
         }
 
-        // age = 18
         install() {
           this.data = {
             name: "789101112"
@@ -53,10 +48,8 @@
         }
       }
 
-      myEno.css =
-        `div{color:red}div p{font-size:14px}
-` + style;
-      myEno.abc = 2123;
+      myEno.css = `div{color:red}div p{font-size:14px}
+`;
       define("my-eno", myEno);
       render(
         html`

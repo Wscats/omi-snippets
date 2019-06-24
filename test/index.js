@@ -1,13 +1,9 @@
-import { WeElement, define, h } from "omi"; // 123345123
-// 456789
-// import axios from 'axios';
-
+import { WeElement, define, h } from "omi";
 const style = "a{color:red}";
 
 class myEno extends WeElement {
   constructor(...args) {
     super(...args);
-    this.abc = 123;
     this.qwesd = void 0;
   }
 
@@ -26,7 +22,6 @@ class myEno extends WeElement {
     );
   }
 
-  // age = 18
   install() {
     this.data = {
       name: "789101112"
@@ -43,8 +38,6 @@ class myEno extends WeElement {
   }
 }
 
-myEno.css =
-  `div{color:red}div p{font-size:14px}
-` + style;
-myEno.abc = 2123;
+myEno.css = `div{color:red}div p{font-size:14px}
+`;
 define("my-eno", myEno);
