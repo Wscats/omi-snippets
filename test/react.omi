@@ -1,0 +1,21 @@
+<template name="My-abc-abc">
+    <div>
+        <!-- JSX -->
+        <p>{this.data.title}</p>
+    </div>
+</template>
+<script>
+// JS
+export default connect()(class {
+    componentDidMount() {
+        this.data = {
+            title: "omi",
+            name: 'ract'
+        }
+    }
+})
+</script>
+<style lang="scss">
+/* CSS */
+p {color: #58bc58};
+</style>

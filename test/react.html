@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eno Yao</title>
+  </head>
+  <body>
+    <script src="https://tencent.github.io/omi/packages/omi/dist/omi.js"></script>
+    <script>
+      const { WeElement, define, html, h, render } = omi;
+      export default connect()(
+        class MyAbcAbc extends WeElement {
+          render() {
+            return html`
+              h("div", null, h("p", null, this.data.title));
+            `;
+          }
+
+          componentDidMount() {
+            this.data = {
+              title: "omi",
+              name: "ract"
+            };
+          }
+        }
+      );
+      render(
+        html`
+          <My-abc-abc />
+        `,
+        "body"
+      );
+    </script>
+  </body>
+</html>
