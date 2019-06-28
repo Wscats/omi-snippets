@@ -1,43 +1,65 @@
-<template name="my-eno">
+<template name="My-eno">
     <div>
-        {this.data.name}
+        {this.state.name}
         <button onClick={this.testClick.bind(this)}>ok</button>
     </div>
 </template>
 <script>
-// 123345123
-// 456789
-/* import axios from 'axios';*/
-const style = 'a{color:red}'
-export default class {
-    // static css = style
-    // static num = 1 + 1
-    // static abc = 2123
-    // age = 18
-    // ads
-    // asasd
-    // abc = 123
-    // asd
-    // abc = 123
-    // static css = style
-    install() {
-        this.data = {
-            name: '789101112',
+    import {h,WeElement}
+    // 123345123
+    // 456789
+    /* import axios from 'axios';*/
+    // window.WeElement = React.Component;
+    // window.h = React.createElement;
+    // define = (ComponentName, componentClass) => {
+        // console.log(ComponentName, componentClass)
+        // export default componentClass
+        // ReactDOM.render(
+        //     h("div", null, h(componentClass, null)),
+        //     document.querySelector("#demo")
+        // );
+    // };
+    const style = 'a{color:red}';
+    export default class {
+        state = {
+            name: 'yao'
         }
+        componentDidMount(){
+            console.log('LifeCycle')
+        }
+        // static css = style
+        // static num = 1 + 1
+        // static abc = 2123
+        // age = 18
+        // ads
+        // asasd
+        // abc = 123
+        // asd
+        // abc = 123
+        // static css = style
+        // install() {
+        //     this.data = {
+        //         name: '789101112',
+        //     }
+        // }
+        testClick() {
+            this.setState({
+                name: "jing"
+            })
+        }
+        // a(){
+        //     console.log(1123123)
+        // }
+        // css(){}
+        // qwesd
+        // render(){}
     }
-    testClick() {
-        this.data.name = 789;
-        this.update();
-    }
-    a(){
-        console.log(1123123)
-    }
-    css(){}
-    qwesd
-}
+// ReactDOM.render(
+//     <my-abc>
+// )
+
 </script>
 <style lang="scss">
-
     div {
         color: red;
 

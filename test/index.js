@@ -4,14 +4,16 @@ const style = "a{color:red}";
 class myEno extends WeElement {
   constructor(...args) {
     super(...args);
-    this.qwesd = void 0;
+    this.state = {
+      name: "yao"
+    };
   }
 
   render() {
     return h(
       "div",
       null,
-      this.data.name,
+      this.state.name,
       h(
         "button",
         {
@@ -22,22 +24,16 @@ class myEno extends WeElement {
     );
   }
 
-  install() {
-    this.data = {
-      name: "789101112"
-    };
+  componentDidMount() {
+    console.log("LifeCycle");
   }
 
   testClick() {
-    this.data.name = 789;
-    this.update();
-  }
-
-  a() {
-    console.log(1123123);
+    this.setState({
+      name: "jing"
+    });
   }
 }
 
-myEno.css = `div{color:red}div p{font-size:14px}
-`;
+myEno.css = `div{color:red}div p{font-size:14px}`;
 define("my-eno", myEno);
