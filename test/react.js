@@ -1,17 +1,15 @@
 import { Component as WeElement, createElement as h } from "react";
-export default connect()(
-  class MyAbcAbc extends WeElement {
-    render() {
-      return html`
-        h("div", null, h("p", null, this.data.title));
-      `;
-    }
 
-    componentDidMount() {
-      this.data = {
-        title: "omi",
-        name: "ract"
-      };
-    }
+class MyAbcAbc extends WeElement {
+  render() {
+    return h("p", null, this.state.title);
   }
-);
+
+  constructor(props) {
+    super(props);
+    this.state.title = "Eno Yao";
+  }
+}
+
+MyAbcAbc.css = `p{color:#58bc58}`;
+export default MyAbcAbc;

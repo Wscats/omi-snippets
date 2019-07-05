@@ -1,21 +1,16 @@
-<template name="My-abc-abc">
-    <div>
-        <!-- JSX -->
-        <p>{this.data.title}</p>
-    </div>
+<template name="MyAbcAbc">
+    <p>{this.state.title}</p>
 </template>
 <script>
-// JS
-export default connect()(class {
-    componentDidMount() {
-        this.data = {
-            title: "omi",
-            name: 'ract'
+    export default class {
+        constructor(props) {
+            super(props)
+            this.state.title = "Eno Yao"
         }
     }
-})
 </script>
 <style lang="scss">
-/* CSS */
-p {color: #58bc58};
+    p {
+        color: #58bc58;
+    }
 </style>

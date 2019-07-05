@@ -1,6 +1,6 @@
 const vscode = require('vscode');
 const fs = require('fs');
-const path = require('path');
+// const path = require('path');
 const omil = require('omil');
 const {
     compileSass
@@ -9,7 +9,7 @@ const {
 const transformJsx = require('omil/libs/scripts/extension/transform');
 const prettier = require('prettier');
 const os = require('os');
-const { exec } = require('child_process');
+// const { exec } = require('child_process');
 
 // fileType => .omi .scss .html
 const fileType = (filename) => {
@@ -96,6 +96,17 @@ const readFileName = (path, fileContext) => {
     console.log(fileSuffix);
     switch (fileSuffix) {
         case '.omi':
+            omil({
+                type: 'extension',
+                file: 'html',
+                options: null,
+                source: fileContext,
+                callback(data) {
+                    console.log(data)
+                    // create jsx file and write component jsx 
+                    writeHtmlFileContext(path, data);
+                }
+            });
         case '.eno':
             // console.log(fileNameWithoutSuffixArray);
             console.log(omil);
@@ -111,17 +122,7 @@ const readFileName = (path, fileContext) => {
                 }
             });
             // convert html file
-            omil({
-                type: 'extension',
-                file: 'html',
-                options: null,
-                source: fileContext,
-                callback(data) {
-                    console.log(data)
-                    // create jsx file and write component jsx 
-                    writeHtmlFileContext(path, data);
-                }
-            });
+
             break;
         // case '.jsx':
         //     // console.log(fileNameWithoutSuffixArray);

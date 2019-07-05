@@ -5,7 +5,6 @@
     </div>
 </template>
 <script>
-    import {h,WeElement}
     // 123345123
     // 456789
     /* import axios from 'axios';*/

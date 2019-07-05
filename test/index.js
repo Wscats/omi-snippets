@@ -1,7 +1,16 @@
-import { WeElement, define, h } from "omi";
+import { Component as WeElement, createElement as h } from "react";
+import styled from "styled-components";
+const StyledComponents = styled.div`
+  div {
+    color: red;
+  }
+  div p {
+    font-size: 14px;
+  }
+`;
 const style = "a{color:red}";
 
-class myEno extends WeElement {
+class MyEno extends WeElement {
   constructor(...args) {
     super(...args);
     this.state = {
@@ -11,15 +20,19 @@ class myEno extends WeElement {
 
   render() {
     return h(
-      "div",
+      StyledComponents,
       null,
-      this.state.name,
       h(
-        "button",
-        {
-          onClick: this.testClick.bind(this)
-        },
-        "ok"
+        "div",
+        null,
+        this.state.name,
+        h(
+          "button",
+          {
+            onClick: this.testClick.bind(this)
+          },
+          "ok"
+        )
       )
     );
   }
@@ -35,5 +48,5 @@ class myEno extends WeElement {
   }
 }
 
-myEno.css = `div{color:red}div p{font-size:14px}`;
-define("my-eno", myEno);
+MyEno.css = `div{color:red}div p{font-size:14px}`;
+export default MyEno;
