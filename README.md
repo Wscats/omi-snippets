@@ -34,9 +34,7 @@ For example, you can create `test.omi` in Visual Studio Code before install [Omi
 ```html
 <!-- test.omi -->
 <template name="component-name">
-    <div>
-        {this.data.name}
-    </div>
+    <div>{this.data.name}</div>
 </template>
 <script>
 import style from './style.css';
@@ -50,9 +48,7 @@ export default class {
 }
 </script>
 <style lang="scss">
-    div{
-        color:red;
-    }
+    div{ color:red; }
 </style>
 ```
 
@@ -62,19 +58,11 @@ After you save the code in editor`(Ctrl+S)`, it will be converted into `test.js`
 import { WeElement, define, h } from "omi";
 import style from "./style.css";
 const componentName = class extends WeElement {
-  render() {
-    return h("div", null, this.data.name);
-  }
+  render() { return h("div", null, this.data.name); }
   static css =
-    `
-      div{
-          color:red;
-      }
-    ` + style;
+    `div{color:red;}` + style;
   install() {
-    this.data = {
-      name: "Eno Yao"
-    };
+    this.data = { name: "Eno Yao" };
   }
 };
 define("component-name", componentName);
@@ -93,13 +81,9 @@ A `*.omi` file is a custom file format that uses HTML-like syntax to describe a 
 import style from './_oHeader.css'
 export default class {
   static css = style + `p{color:red}` // it will combine scoped css，only support static css = xxx
-  test(){
-    console.log('Hello Eno!')
-  }
+  test(){ console.log('Hello Eno!') }
   install() {
-    this.data = {
-      title: 'Omi'
-    }
+    this.data = { title: 'Omi' }
   }
 }
 </script>
@@ -162,9 +146,7 @@ You can also use an ES6 class to define a class component by omil.
 A higher-order component (HOC) is an advanced technique in React for reusing component logic. HOCs are not part of the React API. Here's a concrete example.
 ```html
 <template name="ComponentName">
-    <div>
-        <p>{this.state.title}</p>
-    </div>
+    <div><p>{this.state.title}</p></div>
 </template>
 <script>
     const HOC = (props) => {
@@ -176,10 +158,7 @@ A higher-order component (HOC) is an advanced technique in React for reusing com
                 }
                 render() {
                     return (
-                        <div>
-                            Hello World
-                            <WraooedComponent name={{ ...this.state }} />
-                        </div>
+                        <div>Hello World<WraooedComponent name={{ ...this.state }} /></div>
                     )
                 }
             }
@@ -190,21 +169,14 @@ A higher-order component (HOC) is an advanced technique in React for reusing com
     })(class {
         constructor(props) {
             super(props)
-            this.state = {
-                title: 'Lemon'
-            }
+            this.state = { title: 'Lemon' }
         }
-        componentDidMount() {
-            console.log(this)
-        }
+        componentDidMount() { console.log(this) }
         handleChange() {}
     })
 </script>
 <style lang="scss">
-    /* CSS */
-    p {
-        color: #58bc58;
-    }
+    p { color: #58bc58; }
 </style>
 ```
 
