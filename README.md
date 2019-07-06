@@ -125,6 +125,9 @@ header {
 
 ## Support React
 
+```bash
+npm install styled-components --save
+```
 You can also use an ES6 class to define a class component by omil.
 ```html
 <template name="ComponentName">
@@ -142,6 +145,8 @@ You can also use an ES6 class to define a class component by omil.
     p {color: #58bc58;}
 </style>
 ```
+
+> [React Demo](https://github.com/Wscats/omil/blob/master/src/components/React/Eno.eno)
 
 A higher-order component (HOC) is an advanced technique in React for reusing component logic. HOCs are not part of the React API. Here's a concrete example.
 ```html
@@ -217,6 +222,10 @@ export default (Component: React.ComponentType) => {
     }
 }
 ```
+
+> [React Demo](https://github.com/Wscats/omil/blob/master/src/components/React/Eno.eno)
+
+> [Typescript Demo](https://github.com/Wscats/omil/blob/master/src/components/React/EnoType.tsx)
 
 There are many cool features provided by `omil`:
 
