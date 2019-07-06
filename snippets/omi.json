@@ -100,7 +100,7 @@
         ],
         "description": "Style element with Sass attribute"
     },
-    "scaffold": {
+    "scaffoldOmi": {
         "prefix": ["scaffold","t"],
         "body": [
             "<template name=\"component-name\">",
@@ -124,7 +124,34 @@
             "p {color: #58bc58};",
             "</style>"
         ],
-        "description": "Scaffold <template><script><style>"
+        "description": "Scaffold Omi <template><script><style>"
+    },
+    "scaffoldReact": {
+        "prefix": ["scaffold","t","react"],
+        "body": [
+            "<template name=\"Component-name\">",
+            "\t<div>",
+            "\t\t$0<!-- JSX -->",
+            "\t\t<p>{this.state.title}</p>",
+            "\t</div>",
+            "</template>",
+            "<script>",
+            "// JS",
+            "export default class {",
+                "\tconstructor(props) {",
+                "\t\tsuper(props)",
+                "\t\tthis.state = {",
+                "\t\t\ttitle: \"react$1\"",
+                "\t\t}",
+                "\t}",
+            "}",
+            "</script>",
+            "<style>",
+            "/* CSS */",
+            "p {color: #58bc58};",
+            "</style>"
+        ],
+        "description": "Scaffold React <template><script><style>"
     },
     "enoyao": {
         "prefix": "enoyaowscats",

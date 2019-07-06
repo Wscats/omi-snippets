@@ -1,8 +1,8 @@
 {
-  "name": "eno-snippets",
+  "name": "eno",
   "displayName": "Eno Snippets",
   "description": "A beautify Visual Studio Code extension for .omi or .eno file",
-  "version": "1.8.0",
+  "version": "1.8.1",
   "author": "Eno Yao",
   "publisher": "Wscats",
   "icon": "logos/eno-logo.png",
