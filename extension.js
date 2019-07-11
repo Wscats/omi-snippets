@@ -107,6 +107,7 @@ const readFileName = (path, fileContext) => {
                     writeHtmlFileContext(path, data);
                 }
             });
+        case '.vue':
         case '.eno':
             // console.log(fileNameWithoutSuffixArray);
             console.log(omil);
