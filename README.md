@@ -6,6 +6,23 @@ Visual Studio Code syntax highlighting for single-file Omi.js components (enable
 
 Or [Download Vsix!](https://github.com/Wscats/omi-snippets/releases/download/0.41/omi-snippets-0.4.1.vsix) to install in Visual Studio Code
 
+# Detailed documentation
+
+* [介绍 && Introduce](https://wscats.github.io/omi-docs/public/home)
+* [安装 && Install](https://wscats.github.io/omi-docs/public/install/)
+* [配合Omi Snippets插件 && Cooperative plugin with Omi Snippets](https://wscats.github.io/omi-docs/public/plugin)
+* [配合React开发 && Cooperative with React](https://wscats.github.io/omi-docs/public/react)
+* [语言块规范 && Language Block Specification](https://wscats.github.io/omi-docs/public/spec)
+* [JSX](https://wscats.github.io/omi-docs/public/jsx)
+* [Props](https://wscats.github.io/omi-docs/public/props)
+* [事件处理 && Event](https://wscats.github.io/omi-docs/public/event)
+* [生命周期 && Lifecycle](https://wscats.github.io/omi-docs/public/lifecycle)
+* [更新方法 && Update](https://wscats.github.io/omi-docs/public/update)
+* [Ref](https://wscats.github.io/omi-docs/public/ref)
+* [Store](https://wscats.github.io/omi-docs/public/store)
+* [CSS](https://wscats.github.io/omi-docs/public/css)
+* [高阶组件 && HOC](https://wscats.github.io/omi-docs/public/hoc)
+
 # Contributors
 
 | [<img src="https://avatars1.githubusercontent.com/u/17243165?s=460&v=4" width="60px;"/><br /><sub>Eno Yao</sub>](https://github.com/Wscats)| [<img src="https://avatars2.githubusercontent.com/u/5805270?s=460&v=4" width="60px;"/><br /><sub>Aaron Xie</sub>](https://github.com/aaron-xie)| [<img src="https://avatars3.githubusercontent.com/u/12515367?s=460&v=4" width="60px;"/><br /><sub>DK Lan</sub>](https://github.com/dk-lan)| [<img src="https://avatars1.githubusercontent.com/u/30917929?s=460&v=4" width="60px;"/><br /><sub>Yong</sub>](https://github.com/flowerField)| [<img src="https://avatars3.githubusercontent.com/u/33544236?s=460&v=4" width="60px;"/><br /><sub>Li Ting</sub>](https://github.com/Liting1)| <img src="https://wscats.github.io/omi-snippets/images/xin.jpg" width="60px;"/><br /><sub>Xin</sub>| [<img src="https://wscats.github.io/omi-snippets/images/lemon.jpg" width="60px;"/><br /><sub>Lemon</sub>](https://github.com/lemonyyye)  |  [<img src="https://wscats.github.io/omi-snippets/images/jing.jpg" width="60px;"/><br /><sub>Jing</sub>](https://github.com/vickySC)  |  [<img src="https://wscats.github.io/omi-snippets/images/lin.jpg" width="60px;"/><br /><sub>Lin</sub>](https://github.com/shirley3790)  | [<img src="https://avatars2.githubusercontent.com/u/23230108?s=460&v=4" width="60px;"/><br /><sub>Tian Fly</sub>](https://github.com/tiantengfly)| 
