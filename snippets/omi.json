@@ -101,7 +101,7 @@
         "description": "Style element with Sass attribute"
     },
     "scaffoldOmi": {
-        "prefix": ["scaffold","t"],
+        "prefix": ["scaffold","t-omi","!omi"],
         "body": [
             "<template name=\"component-name\">",
             "\t<div>",
@@ -127,7 +127,7 @@
         "description": "Scaffold Omi <template><script><style>"
     },
     "scaffoldReact": {
-        "prefix": ["scaffold","t","react"],
+        "prefix": ["scaffold","t-react","react","!react"],
         "body": [
             "<template name=\"Component-name\">",
             "\t<div>",

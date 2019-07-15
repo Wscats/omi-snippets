@@ -36,7 +36,7 @@ const writeJsFileContext = (path, data) => {
         parser: "babel",
     });
     fs.writeFile(`${path}.js`, code, () => {
-        vscode.window.showInformationMessage(`Write Success! JS Path: ${path}.js`);
+        vscode.window.showInformationMessage(`Write Success! Js Path: ${path}.js`);
         console.log('write success');
     });
     // showInformationMessage
@@ -63,6 +63,7 @@ const writeScssFileContext = (path, data) => {
     });
     fs.writeFile(`${path}.css`, code, () => {
         console.log('write success');
+        vscode.window.showInformationMessage(`Write Success! Css Path: ${path}.css`);
     });
 }
 
@@ -116,9 +117,9 @@ const readFileName = (path, fileContext) => {
                     })
                     // create jsx file and write component jsx 
                     if (status === 'success') {
-                        writeJsFileContext(path, allScript);
+                        writeHtmlFileContext(path, allScript);
                     } else {
-                        vscode.window.showInformationMessage(`Error: ${e}`);
+                        vscode.window.showErrorMessage(`Js Error: ${e}`);
                     }
                 }
             });
@@ -141,7 +142,7 @@ const readFileName = (path, fileContext) => {
                     if (status === 'success') {
                         writeJsFileContext(path, allScript);
                     } else {
-                        vscode.window.showInformationMessage(`Error: ${e}`);
+                        vscode.window.showErrorMessage(`Js Error: ${e}`);
                     }
                 }
             });
@@ -168,6 +169,8 @@ const readFileName = (path, fileContext) => {
             compileSass(fileContext).then((data) => {
                 console.log(data.text);
                 writeScssFileContext(path, data.text);
+            }).catch((err)=>{
+                vscode.window.showErrorMessage(`Css Error: ${err}`);
             })
             break;
         default:

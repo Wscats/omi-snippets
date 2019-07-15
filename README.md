@@ -1,4 +1,4 @@
-# Omi Snippets
+# Eno Snippets
 
 [Try it Now!](https://marketplace.visualstudio.com/items?itemName=Wscats.omi-snippets)
 

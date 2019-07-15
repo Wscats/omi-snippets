@@ -1,11 +1,11 @@
 {
-  "name": "omi-snippets",
-  "displayName": "Omi Snippets",
-  "description": "A beautify Visual Studio Code extension for .omi .eno .vue or scss file",
+  "name": "eno",
+  "displayName": "Eno Snippets",
+  "description": "A beautify Visual Studio Code extension for .omi .eno .vue or .scss file",
   "version": "1.9.0",
   "author": "Eno Yao",
   "publisher": "Wscats",
-  "icon": "logos/omi-logo.png",
+  "icon": "logos/eno-logo.png",
   "keywords": [
     "omi",
     "omijs",
@@ -67,14 +67,7 @@
       {
         "id": "omi",
         "aliases": [
-          "Omi",
-          "eno",
-          "html",
-          "Eno",
-          "omi",
-          "Eno.js",
-          "eno",
-          "html"
+          "Omi"
         ],
         "extensions": [
           ".omi"
@@ -84,12 +77,7 @@
       {
         "id": "eno",
         "aliases": [
-          "Omi",
-          "Omi.js",
-          "omi",
-          "Eno.js",
-          "eno",
-          "html"
+          "Omi"
         ],
         "extensions": [
           ".eno"
@@ -111,17 +99,7 @@
           ".omi",
           ".eno",
           ".html",
-          ".htm",
-          ".shtml",
-          ".xhtml",
-          ".mdoc",
-          ".jsp",
-          ".asp",
-          ".aspx",
-          ".jshtm",
-          ".volt",
-          ".ejs",
-          ".rhtml"
+          ".htm"
         ],
         "aliases": [
           "HTML",
@@ -175,6 +153,14 @@
       {
         "language": "eno",
         "path": "./snippets/css.json"
+      },
+      {
+        "language": "html",
+        "path": "./snippets/omi.json"
+      },
+      {
+        "language": "vue",
+        "path": "./snippets/omi.json"
       }
     ]
   },
