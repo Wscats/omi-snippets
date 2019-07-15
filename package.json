@@ -1,8 +1,8 @@
 {
   "name": "omi-snippets",
   "displayName": "Omi Snippets",
-  "description": "A beautify Visual Studio Code extension for .omi or .eno file",
-  "version": "1.8.6",
+  "description": "A beautify Visual Studio Code extension for .omi .eno .vue or scss file",
+  "version": "1.9.0",
   "author": "Eno Yao",
   "publisher": "Wscats",
   "icon": "logos/omi-logo.png",
@@ -15,6 +15,7 @@
     "yao",
     "wscats",
     "yjl",
+    "css",
     "scss",
     "sass",
     "lemon",
@@ -32,7 +33,11 @@
     "jsx",
     "sfc",
     "component",
-    "single file component"
+    "vue",
+    "single file component",
+    "老姚",
+    "一一",
+    "htm"
   ],
   "activationEvents": [
     "*"
@@ -54,7 +59,8 @@
   },
   "categories": [
     "Programming Languages",
-    "Snippets"
+    "Snippets",
+    "Formatters"
   ],
   "contributes": {
     "languages": [
@@ -62,12 +68,13 @@
         "id": "omi",
         "aliases": [
           "Omi",
+          "eno",
           "html",
           "Eno",
           "omi",
           "Eno.js",
           "eno",
-          "yao"
+          "html"
         ],
         "extensions": [
           ".omi"
@@ -77,17 +84,51 @@
       {
         "id": "eno",
         "aliases": [
-          "html",
+          "Omi",
           "Omi.js",
           "omi",
           "Eno.js",
           "eno",
-          "yao"
+          "html"
         ],
         "extensions": [
           ".eno"
         ],
         "configuration": "./omi.configuration.json"
+      },
+      {
+        "id": "vue",
+        "aliases": [
+          "vue"
+        ],
+        "extensions": [
+          ".vue"
+        ]
+      },
+      {
+        "id": "html",
+        "extensions": [
+          ".omi",
+          ".eno",
+          ".html",
+          ".htm",
+          ".shtml",
+          ".xhtml",
+          ".mdoc",
+          ".jsp",
+          ".asp",
+          ".aspx",
+          ".jshtm",
+          ".volt",
+          ".ejs",
+          ".rhtml"
+        ],
+        "aliases": [
+          "HTML",
+          "htm",
+          "html",
+          "xhtml"
+        ]
       }
     ],
     "grammars": [
@@ -143,7 +184,7 @@
     "@babel/plugin-proposal-class-properties": "^7.4.4",
     "@babel/preset-env": "^7.4.5",
     "@babel/preset-react": "^7.0.0",
-    "omil": "^1.8.8",
+    "omil": "^1.8.9",
     "prettier": "1.17.1"
   }
 }

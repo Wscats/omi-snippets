@@ -119,7 +119,7 @@
                 "\t}",
             "}",
             "</script>",
-            "<style lang=\"scss\">",
+            "<style>",
             "/* CSS */",
             "p {color: #58bc58};",
             "</style>"

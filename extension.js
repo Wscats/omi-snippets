@@ -36,8 +36,11 @@ const writeJsFileContext = (path, data) => {
         parser: "babel",
     });
     fs.writeFile(`${path}.js`, code, () => {
+        vscode.window.showInformationMessage(`Write Success! JS Path: ${path}.js`);
         console.log('write success');
     });
+    // showInformationMessage
+
 }
 
 // JSX
@@ -101,10 +104,22 @@ const readFileName = (path, fileContext) => {
                 file: 'html',
                 options: null,
                 source: fileContext,
-                callback(data) {
-                    console.log(data)
+                callback({
+                    status,
+                    allScript,
+                    e
+                }) {
+                    console.log({
+                        status,
+                        allScript,
+                        e
+                    })
                     // create jsx file and write component jsx 
-                    writeHtmlFileContext(path, data);
+                    if (status === 'success') {
+                        writeJsFileContext(path, allScript);
+                    } else {
+                        vscode.window.showInformationMessage(`Error: ${e}`);
+                    }
                 }
             });
         case '.vue':
@@ -116,10 +131,18 @@ const readFileName = (path, fileContext) => {
                 type: 'extension',
                 options: null,
                 source: fileContext,
-                callback(data) {
-                    console.log(data)
-                    // create jsx file and write component jsx 
-                    writeJsFileContext(path, data);
+                callback({
+                    status,
+                    allScript,
+                    e
+                }) {
+                    // console.log(obj.status)
+                    // // create jsx file and write component jsx 
+                    if (status === 'success') {
+                        writeJsFileContext(path, allScript);
+                    } else {
+                        vscode.window.showInformationMessage(`Error: ${e}`);
+                    }
                 }
             });
             // convert html file

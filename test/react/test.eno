@@ -1,0 +1,14 @@
+<template name="C">
+    <div>
+        <p>{this.data.name}</p>
+    </div>
+</template>
+<script>
+export default class {
+    install (){
+        this.data = {
+            name: 'abc'
+        }
+    }
+}
+</script>
