@@ -1,5 +1,7 @@
 import { Component as WeElement, createElement as h } from "react";
 import styled from "styled-components";
+import axios from "axios";
+const style = "a{color:red}";
 const StyledComponents = styled.div`
   div {
     color: red;
@@ -8,7 +10,6 @@ const StyledComponents = styled.div`
     font-size: 14px;
   }
 `;
-const style = "a{color:red}";
 
 class MyEno extends WeElement {
   constructor(...args) {
@@ -31,7 +32,7 @@ class MyEno extends WeElement {
           {
             onClick: this.testClick.bind(this)
           },
-          "ok"
+          "okkookko"
         )
       )
     );
@@ -43,7 +44,7 @@ class MyEno extends WeElement {
 
   testClick() {
     this.setState({
-      name: "jing"
+      name: "jingnij"
     });
   }
 }

@@ -1,15 +1,16 @@
-import { Component as WeElement, createElement as h } from "react";
+import { WeElement, define, h } from "omi";
 
-class MyAbcAbc extends WeElement {
-  render() {
-    return h("p", null, this.state.title);
+class ComponentName extends WeElement {
+  render(props) {
+    return h("div", null, h("p", null, this.data.title));
   }
 
-  constructor(props) {
-    super(props);
-    this.state.title = "Eno Yao";
+  install() {
+    this.data = {
+      title: "omi"
+    };
   }
 }
 
-MyAbcAbc.css = `p{color:#58bc58}`;
-export default MyAbcAbc;
+ComponentName.css = `p{color:#58bc58}`;
+define("component-name", ComponentName);

@@ -9,10 +9,15 @@
     <script src="https://tencent.github.io/omi/packages/omi/dist/omi.js"></script>
     <script>
       const { WeElement, define, html, h, render } = omi;
+      const StyledComponents = styled.div`
+        p {
+          color: #58bc58;
+        }
+      `;
 
       class MyAbcAbc extends WeElement {
         render() {
-          return h("p", null, this.state.title);
+          return h(StyledComponents, null, h("p", null, this.state.title));
         }
 
         constructor(props) {

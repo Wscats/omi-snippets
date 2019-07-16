@@ -119,9 +119,9 @@
                 "\t}",
             "}",
             "</script>",
-            "<style>",
+            "<style lang=\"scss\">",
             "/* CSS */",
-            "p {color: #58bc58};",
+            "p {color: #58bc58;}",
             "</style>"
         ],
         "description": "Scaffold Omi <template><script><style>"
@@ -138,17 +138,18 @@
             "<script>",
             "// JS",
             "export default class {",
-                "\tconstructor(props) {",
+                "\tconstructor(props)\t{",
                 "\t\tsuper(props)",
                 "\t\tthis.state = {",
                 "\t\t\ttitle: \"react$1\"",
                 "\t\t}",
                 "\t}",
+                "\tcomponentDidMount\t()\t{}",
             "}",
             "</script>",
-            "<style>",
+            "<style lang=\"scss\">",
             "/* CSS */",
-            "p {color: #58bc58};",
+            "p {color: #58bc58;}",
             "</style>"
         ],
         "description": "Scaffold React <template><script><style>"

@@ -9,7 +9,16 @@
     <script src="https://tencent.github.io/omi/packages/omi/dist/omi.js"></script>
     <script>
       const { WeElement, define, html, h, render } = omi;
+      import axios from "axios";
       const style = "a{color:red}";
+      const StyledComponents = styled.div`
+        div {
+          color: red;
+        }
+        div p {
+          font-size: 14px;
+        }
+      `;
 
       class MyEno extends WeElement {
         constructor(...args) {
@@ -32,7 +41,7 @@
                 {
                   onClick: this.testClick.bind(this)
                 },
-                "ok"
+                "okkookko"
               )
             )
           );
@@ -44,7 +53,7 @@
 
         testClick() {
           this.setState({
-            name: "jing"
+            name: "jingnij"
           });
         }
       }

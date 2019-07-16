@@ -39,7 +39,6 @@ const writeJsFileContext = (path, data) => {
         vscode.window.showInformationMessage(`Write Success! Js Path: ${path}.js`);
         console.log('write success');
     });
-    // showInformationMessage
 
 }
 
@@ -169,7 +168,7 @@ const readFileName = (path, fileContext) => {
             compileSass(fileContext).then((data) => {
                 console.log(data.text);
                 writeScssFileContext(path, data.text);
-            }).catch((err)=>{
+            }).catch((err) => {
                 vscode.window.showErrorMessage(`Css Error: ${err}`);
             })
             break;
@@ -182,17 +181,36 @@ const readFileName = (path, fileContext) => {
 
 function activate(context) {
     console.log(context)
-    // context.subscriptions.push(vscode.languages.setLanguageConfiguration('html'));
     // when you click ctrl+s, fn will action
-
     vscode.workspace.onDidSaveTextDocument((document) => {
         const {
             fileName
         } = document
         const fileContext = readFileContext(fileName);
-        console.log(fileName, fileContext);
+        // console.log(fileName, fileContext);
         readFileName(fileName, fileContext);
     });
+
+    // require('./libs/welcome')(context); // 欢迎提示
+    let disposable = vscode.commands.registerCommand('extension.helloWorld', function () {
+        // vscode.window.showInformationMessage('Hello World!!!!!!!');
+        const panel = vscode.window.createWebviewPanel(
+            'testWelcome', // viewType
+            "Welcome to Eno Snippets", // 视图标题
+            vscode.ViewColumn.One, // 显示在编辑器的哪个部位
+            {
+                enableScripts: true, // 启用JS，默认禁用
+            }
+        );
+        panel.webview.html = require('./libs/welcome/template')
+    });
+    context.subscriptions.push(disposable);
+    // 如果设置里面开启了欢迎页显示，启动欢迎页
+    const key = 'vscodePluginDemo.showTip';
+    if (vscode.workspace.getConfiguration().get(key)) {
+        vscode.commands.executeCommand('extension.helloWorld');
+    }
+
 }
 
 exports.activate = activate;

@@ -1,4 +1,4 @@
-# Eno Snippets
+# Eno and Omi Snippets
 
 [Try it Now!](https://marketplace.visualstudio.com/items?itemName=Wscats.omi-snippets)
 
@@ -6,7 +6,7 @@ Visual Studio Code syntax highlighting for single-file Omi.js components (enable
 
 Or [Download Vsix!](https://github.com/Wscats/omi-snippets/releases/download/0.41/omi-snippets-0.4.1.vsix) to install in Visual Studio Code
 
-# Detailed documentation
+# Detailed Documentation
 
 * [介绍 && Introduce](https://wscats.github.io/omi-docs/public/home)
 * [安装 && Install](https://wscats.github.io/omi-docs/public/install/)
@@ -259,6 +259,8 @@ In a nutshell, the combination of webpack and `omil` gives you a modern, flexibl
 
 |trigger|snippet|
 |-|-|
+|!Omi/t-omi|`<template><script><style>`|
+|!React/t-react|`<template><script><style>`|
 |import|`import { * } from 'omi'`|
 |export default|`export default {}`|
 |modult.export"|`modult.export = {}`|

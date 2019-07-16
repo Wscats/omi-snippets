@@ -1,13 +1,13 @@
 <template name="My-eno">
     <div>
         {this.state.name}
-        <button onClick={this.testClick.bind(this)}>ok</button>
+        <button onClick={this.testClick.bind(this)}>okkookko</button>
     </div>
 </template>
 <script>
     // 123345123
     // 456789
-    /* import axios from 'axios';*/
+    import axios from 'axios';
     // window.WeElement = React.Component;
     // window.h = React.createElement;
     // define = (ComponentName, componentClass) => {
@@ -20,6 +20,9 @@
     // };
     const style = 'a{color:red}';
     export default class {
+        css(){
+            console.log(1)
+        }
         state = {
             name: 'yao'
         }
@@ -43,7 +46,7 @@
         // }
         testClick() {
             this.setState({
-                name: "jing"
+                name: "jingnij"
             })
         }
         // a(){

@@ -1,11 +1,12 @@
 {
-  "name": "eno",
-  "displayName": "Eno Snippets",
+  "name": "omi-snippets",
+  "displayName": "Omi Snippets",
   "description": "A beautify Visual Studio Code extension for .omi .eno .vue or .scss file",
-  "version": "1.9.0",
+  "version": "1.9.3",
   "author": "Eno Yao",
   "publisher": "Wscats",
-  "icon": "logos/eno-logo.png",
+  "icon": "logos/omi-logo.png",
+  "homepage": "https://wscats.github.io/omi-docs/public/home/index.html",
   "keywords": [
     "omi",
     "omijs",
@@ -37,10 +38,12 @@
     "single file component",
     "老姚",
     "一一",
-    "htm"
+    "htm",
+    "reky"
   ],
   "activationEvents": [
-    "*"
+    "*",
+    "onCommand:extension.helloWorld"
   ],
   "main": "./extension",
   "scripts": {
@@ -58,11 +61,23 @@
     "email": "kalone.cool@gmail.com"
   },
   "categories": [
+    "Other",
     "Programming Languages",
     "Snippets",
     "Formatters"
   ],
   "contributes": {
+    "configuration": {
+			"type": "object",
+			"title": "设置欢迎页",
+			"properties": {
+				"vscodePluginDemo.showTip": {
+					"type": "boolean",
+					"default": false,
+					"description": "启动时显示欢迎页"
+				}
+			}
+		},
     "languages": [
       {
         "id": "omi",
@@ -162,8 +177,22 @@
         "language": "vue",
         "path": "./snippets/omi.json"
       }
+    ],
+    "commands": [
+      {
+        "command": "extension.helloWorld",
+        "title": "Hello World"
+      }
     ]
   },
+  "keybindings": [
+    {
+      "command": "extension.helloWorld",
+      "key": "ctrl+f10",
+      "mac": "cmd+f10",
+      "when": "editorTextFocus"
+    }
+  ],
   "license": "MIT",
   "dependencies": {
     "@babel/core": "^7.4.4",
