@@ -191,9 +191,9 @@ function activate(context) {
         readFileName(fileName, fileContext);
     });
 
-    // require('./libs/welcome')(context); // 欢迎提示
+    // 欢迎提示
     let disposable = vscode.commands.registerCommand('extension.helloWorld', function () {
-        // vscode.window.showInformationMessage('Hello World!!!!!!!');
+        // vscode.window.showInformationMessage('Hello World');
         const panel = vscode.window.createWebviewPanel(
             'testWelcome', // viewType
             "Welcome to Eno Snippets", // 视图标题

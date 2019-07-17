@@ -220,7 +220,7 @@ A static type system can help prevent many potential runtime errors, especially 
     })
 </script>
 <style lang="scss">
-    p { color: #58bc58 };
+    p { color: #58bc58; }
 </style>
 ```
 Now, you can create `EnoType.tsx` in editor which provides TypeScript inference inside SFCs and many other great features.
@@ -259,8 +259,8 @@ In a nutshell, the combination of webpack and `omil` gives you a modern, flexibl
 
 |trigger|snippet|
 |-|-|
-|!Omi/t-omi|`<template><script><style>`|
-|!React/t-react|`<template><script><style>`|
+|!omi/t-omi|`<template><script><style>`|
+|!react/t-react|`<template><script><style>`|
 |import|`import { * } from 'omi'`|
 |export default|`export default {}`|
 |modult.export"|`modult.export = {}`|
@@ -271,7 +271,7 @@ In a nutshell, the combination of webpack and `omil` gives you a modern, flexibl
 |script|`<script></script>`|
 |style|`<style></style>`|
 |styleLang|`<style lang></style>`|
-|scaffold|`<template><script><style>`|
+|scaffold/t|`<template><script><style>`|
 |...|...|
 
 **NOTE:** You still need to install corresponding packages for pre-processors (e.g. `JSX, SASS, TypeScript`) to get proper syntax highlighting for them.

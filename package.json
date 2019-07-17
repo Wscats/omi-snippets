@@ -37,8 +37,10 @@
     "vue",
     "single file component",
     "老姚",
+    "姚",
     "一一",
     "htm",
+    "html",
     "reky"
   ],
   "activationEvents": [
@@ -121,6 +123,19 @@
           "htm",
           "html",
           "xhtml"
+        ]
+      },
+      {
+        "id": "scss",
+        "extensions": [
+          ".scss",
+          ".eno",
+          ".html",
+          ".htm"
+        ],
+        "aliases": [
+          "scss",
+          "css"
         ]
       }
     ],
