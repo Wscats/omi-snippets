@@ -2,7 +2,7 @@
   "name": "eno",
   "displayName": "Eno Snippets",
   "description": "A beautify Visual Studio Code extension for .omi .eno .vue or .scss file",
-  "version": "1.9.5",
+  "version": "1.9.6",
   "author": "Eno Yao",
   "publisher": "Wscats",
   "icon": "logos/eno-logo.png",
