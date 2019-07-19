@@ -1,0 +1,21 @@
+.container {
+    height: 100%; }
+  
+  .columns {
+    height: 100%; }
+  
+  html, body {
+    height: 100%;
+    margin: 0; }
+  
+  a {
+    color: #004ed0; }
+  
+  a:hover {
+    color: #6d6d6d;
+    text-decoration: none; }
+  
+  img {
+    max-width: 100%;
+    max-height: 100%; }
+  

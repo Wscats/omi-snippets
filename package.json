@@ -1,11 +1,11 @@
 {
-  "name": "omi-snippets",
-  "displayName": "Omi Snippets",
+  "name": "eno",
+  "displayName": "Eno Snippets",
   "description": "A beautify Visual Studio Code extension for .omi .eno .vue or .scss file",
-  "version": "1.9.3",
+  "version": "1.9.5",
   "author": "Eno Yao",
   "publisher": "Wscats",
-  "icon": "logos/omi-logo.png",
+  "icon": "logos/eno-logo.png",
   "homepage": "https://wscats.github.io/omi-docs/public/home/index.html",
   "keywords": [
     "omi",
@@ -195,14 +195,14 @@
     ],
     "commands": [
       {
-        "command": "extension.helloWorld",
-        "title": "Hello World"
+        "command": "extension.eno",
+        "title": "Eno Snippents"
       }
     ]
   },
   "keybindings": [
     {
-      "command": "extension.helloWorld",
+      "command": "extension.eno",
       "key": "ctrl+f10",
       "mac": "cmd+f10",
       "when": "editorTextFocus"
