@@ -128,10 +128,7 @@
       {
         "id": "scss",
         "extensions": [
-          ".scss",
-          ".eno",
-          ".html",
-          ".htm"
+          ".scss"
         ],
         "aliases": [
           "scss",
