@@ -1,16 +1,14 @@
 # Eno and Omi Snippets
 
-[Try it Now!](https://marketplace.visualstudio.com/items?itemName=Wscats.omi-snippets)
+[Try it Now!](https://marketplace.visualstudio.com/items?itemName=Wscats.omi-snippets) Visual Studio Code syntax highlighting for single-file Omi.js components (enabled by omil). Or [Download Vsix!](https://github.com/Wscats/omi-snippets/releases/download/0.41/omi-snippets-0.4.1.vsix) to install in Visual Studio Code
 
-Visual Studio Code syntax highlighting for single-file Omi.js components (enabled by omil).
+> 下载地址 & Download： https://marketplace.visualstudio.com/items?itemName=Wscats.eno
 
-Or [Download Vsix!](https://github.com/Wscats/omi-snippets/releases/download/0.41/omi-snippets-0.4.1.vsix) to install in Visual Studio Code
-
-> 体验地址： https://marketplace.visualstudio.com/items?itemName=Wscats.eno
-
-> 项目地址： https://github.com/Wscats/omi-snippets
+> 项目地址 & Source Code ： https://github.com/Wscats/omi-snippets
 
 # Detailed Documentation
+
+> 详细文档 & Document： https://github.com/Wscats/omi-docs
 
 * [介绍 && Introduce](https://wscats.github.io/omi-docs/public/home)
 * [安装 && Install](https://wscats.github.io/omi-docs/public/install/)
