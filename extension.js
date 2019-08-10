@@ -138,7 +138,7 @@ const readFileName = (path, fileContext) => {
                     }
                 }
             });
-        case '.vue':
+        // case '.vue':
         case '.eno':
             // console.log(fileNameWithoutSuffixArray);
             console.log(omil);

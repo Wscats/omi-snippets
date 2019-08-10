@@ -6,6 +6,10 @@ Visual Studio Code syntax highlighting for single-file Omi.js components (enable
 
 Or [Download Vsix!](https://github.com/Wscats/omi-snippets/releases/download/0.41/omi-snippets-0.4.1.vsix) to install in Visual Studio Code
 
+> 体验地址： https://marketplace.visualstudio.com/items?itemName=Wscats.eno
+
+> 项目地址： https://github.com/Wscats/omi-snippets
+
 # Detailed Documentation
 
 * [介绍 && Introduce](https://wscats.github.io/omi-docs/public/home)
