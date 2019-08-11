@@ -39,7 +39,7 @@
 # Quick Start
 
 - Install [Omi Snippets](https://marketplace.visualstudio.com/items?itemName=Wscats.omi-snippets).
-- Try it with [omil](https://github.com/Wscats/omil), a Omi.js components loader based on webpack.
+- Try it with [omil](https://github.com/Wscats/omil)✌️😜, a Omi.js components loader based on webpack.
 - Via Marketplace Control: search for `Omi Snippets` and click install.
 - Manual: clone this repo and install `omi-snippets.vsix` into your Visual Studio Code.
 > In addition, if you want to build and install the extension from source, you need to install [vsce](https://code.visualstudio.com/api/working-with-extensions/publishing-extension), like this.
