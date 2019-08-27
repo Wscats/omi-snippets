@@ -1,11 +1,11 @@
 {
-  "name": "omi-snippets",
-  "displayName": "Omi Snippets",
+  "name": "eno",
+  "displayName": "Eno Snippets",
   "description": "A beautify Visual Studio Code extension for .omi .eno .vue or .scss file",
-  "version": "2.0.5",
+  "version": "2.0.6",
   "author": "Eno Yao",
   "publisher": "Wscats",
-  "icon": "logos/omi-logo.png",
+  "icon": "logos/eno-logo.png",
   "homepage": "https://wscats.github.io/omi-docs/public/home/index.html",
   "keywords": [
     "omi",
@@ -31,6 +31,7 @@
     "wang",
     "sha",
     "react",
+    "rax",
     "jsx",
     "sfc",
     "component",
@@ -211,7 +212,7 @@
     "@babel/plugin-proposal-class-properties": "^7.4.4",
     "@babel/preset-env": "^7.4.5",
     "@babel/preset-react": "^7.0.0",
-    "omil": "^1.8.9",
+    "omil": "^1.9.3",
     "prettier": "1.17.1"
   }
 }

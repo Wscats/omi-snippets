@@ -152,11 +152,20 @@ const readFileName = (path, fileContext) => {
                     allScript,
                     e
                 }) {
-                    // console.log(obj.status)
+                    // console.log({
+                    //     status,
+                    //     allScript,
+                    //     e
+                    // })
                     // // create jsx file and write component jsx 
                     if (status === 'success') {
                         writeJsFileContext(path, allScript);
                     } else {
+                        console.log({
+                            status,
+                            allScript,
+                            e
+                        })
                         vscode.window.showErrorMessage(`Js Error: ${e}`);
                     }
                 }
@@ -224,11 +233,10 @@ function activate(context) {
     });
     context.subscriptions.push(disposable);
     // 如果设置里面开启了欢迎页显示，启动欢迎页
-    const key = 'vscodePluginDemo.showTip';
-    if (vscode.workspace.getConfiguration().get(key)) {
-        vscode.commands.executeCommand('extension.eno');
-    }
-
+    // const key = 'vscodePluginDemo.showTip';
+    // if (vscode.workspace.getConfiguration().get(key)) {
+    //     vscode.commands.executeCommand('extension.eno');
+    // }
 }
 
 exports.activate = activate;
