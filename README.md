@@ -4,7 +4,9 @@
 <a href="https://marketplace.visualstudio.com/items?itemName=Wscats.eno"><img src="https://img.shields.io/badge/Macketplace-v2.00-brightgreen" /></a>
 <a href="https://github.com/Wscats/omi-snippets"><img src="https://img.shields.io/badge/Github Page-Wscats-yellow" /></a>
 <a href="https://github.com/Wscats"><img src="https://img.shields.io/badge/Author-Eno Yao-blueviolet" /></a>
-[![Netlify Status](https://api.netlify.com/api/v1/badges/b652768b-1673-42cd-98dd-3fd807b2ebca/deploy-status)](https://marketplace.visualstudio.com/items?itemName=Wscats.eno)
+<a href="https://github.com/Wscats"><img src="https://api.netlify.com/api/v1/badges/b652768b-1673-42cd-98dd-3fd807b2ebca/deploy-status" /></a>
+
+<!-- [![Netlify Status](https://api.netlify.com/api/v1/badges/b652768b-1673-42cd-98dd-3fd807b2ebca/deploy-status)](https://marketplace.visualstudio.com/items?itemName=Wscats.eno) -->
 
 [Try it Now!](https://marketplace.visualstudio.com/items?itemName=Wscats.omi-snippets) Visual Studio Code syntax highlighting for single-file Omi.js components (enabled by omil). Or [Download Vsix!](https://github.com/Wscats/omi-snippets/releases/download/2.03/eno-2.0.3.vsix) to install in Visual Studio Code
 
