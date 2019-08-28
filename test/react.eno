@@ -1,6 +1,7 @@
-<template name="component-name">
+<template name="Component-name">
     <div>
         <!-- JSX -->
+        <input />
         <p>{this.data.title}</p>
     </div>
 </template>
@@ -16,5 +17,5 @@ export default class {
 </script>
 <style lang="scss">
 /* CSS */
-p {color: #58bc58}
+p {color: #58bc58;}
 </style>
