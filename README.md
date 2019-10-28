@@ -268,8 +268,6 @@ In a nutshell, the combination of webpack and `omil` gives you a modern, flexibl
 
 Automatically compiles sass/scss files to .css saving. You may also quickly compile sass/scss files in your project.
 
-
-
 # Code Snippets
 
 |trigger|snippet|
