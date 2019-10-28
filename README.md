@@ -264,6 +264,11 @@ There are many cool features provided by `omil`:
 
 In a nutshell, the combination of webpack and `omil` gives you a modern, flexible and extremely powerful front-end workflow for authoring Omi.js applications.
 
+# Cooperate With Sass
+
+Automatically compiles sass/scss files to .css saving. You may also quickly compile sass/scss files in your project.
+
+
 
 # Code Snippets
 
