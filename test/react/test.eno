@@ -1,14 +1,18 @@
 <template name="C">
     <div>
+        <input />
         <p>{this.data.name}</p>
     </div>
 </template>
 <script>
-export default class {
-    install (){
-        this.data = {
-            name: 'abc'
+    export default class {
+        constructor(props) {
+            super(props)
         }
     }
-}
 </script>
+<style>
+    div {
+        color: red;
+    }
+</style>
