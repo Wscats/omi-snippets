@@ -1,0 +1,18 @@
+<template>
+    <div>hello world</div>
+</template>
+<script>
+    import axios from 'axios'
+    import a from 'a'
+    export default class {
+        constructor(){
+            this.name = 'a'
+        }
+    }
+    
+</script>
+<style>
+a{
+    color:red;
+}
+</style>
