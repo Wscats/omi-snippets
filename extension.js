@@ -189,14 +189,14 @@ const readFileName = (path, fileContext) => {
         //         console.log(stdout);
         //     });
         //     break;
-        case '.scss':
-            compileSass(fileContext).then((data) => {
-                console.log(data.text);
-                writeScssFileContext(path, data.text);
-            }).catch((err) => {
-                vscode.window.showErrorMessage(`Css Error: ${err}`);
-            })
-            break;
+        // case '.scss':
+        //     compileSass(fileContext).then((data) => {
+        //         console.log(data.text);
+        //         writeScssFileContext(path, data.text);
+        //     }).catch((err) => {
+        //         vscode.window.showErrorMessage(`Css Error: ${err}`);
+        //     })
+        //     break;
         default:
             console.log('Not omi file!')
             break;

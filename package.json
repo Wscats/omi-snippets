@@ -2,7 +2,7 @@
   "name": "omi-snippets",
   "displayName": "Omi Snippets",
   "description": "A beautify Visual Studio Code extension for .omi .eno .vue or .scss file",
-  "version": "2.1.3",
+  "version": "2.1.5",
   "author": "Eno Yao",
   "publisher": "Wscats",
   "icon": "logos/omi-logo.png",
