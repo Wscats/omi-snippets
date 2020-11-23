@@ -204,9 +204,6 @@
     "body": "console.timeEnd(${1:object});",
     "description": "Sets end point for execution time measurement"
   },
-
-
-  
   "var statement": {
     "prefix": "var",
     "body": "var ${0}",

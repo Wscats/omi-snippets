@@ -2,14 +2,7 @@ const vscode = require('vscode');
 const fs = require('fs');
 const path = require('path');
 const omil = require('omil');
-const {
-    compileSass
-} = require('omil/libs/styles/extension');
-
-const transformJsx = require('omil/libs/scripts/extension/transform');
 const prettier = require('prettier');
-const os = require('os');
-// const { exec } = require('child_process');
 
 /**
  * 从某个HTML文件读取能被Webview加载的HTML内容
@@ -58,30 +51,6 @@ const writeJsFileContext = (path, data) => {
 
 }
 
-// JSX
-const writeJsxFileContext = async (path, data) => {
-    const code = prettier.format(data, {
-        parser: "babel",
-    });
-    const jsxObj = await transformJsx(code, null);
-    console.log(jsxObj.code);
-    fs.writeFile(`${path}.eno.jsx`, jsxObj.code, () => {
-        console.log('write success');
-    });
-}
-
-// SCSS
-const writeScssFileContext = (path, data) => {
-    path = handleFilePath(path, 5);
-    const code = prettier.format(data, {
-        parser: "css",
-    });
-    fs.writeFile(`${path}.css`, code, () => {
-        console.log('write success');
-        vscode.window.showInformationMessage(`Write Success! Css Path: ${path}.css`);
-    });
-}
-
 // HTML
 const writeHtmlFileContext = (path, data) => {
     path = handleFilePath(path, 4);
@@ -101,8 +70,8 @@ const writeHtmlFileContext = (path, data) => {
         </body>
         </html>
     `, {
-            parser: "html",
-        });
+        parser: "html",
+    });
     fs.writeFile(`${path}.html`,
         code
         , () => {
@@ -138,11 +107,7 @@ const readFileName = (path, fileContext) => {
                     }
                 }
             });
-        // case '.vue':
         case '.eno':
-            // console.log(fileNameWithoutSuffixArray);
-            console.log(omil);
-            // convert jsx file
             omil({
                 type: 'extension',
                 options: null,
@@ -152,12 +117,7 @@ const readFileName = (path, fileContext) => {
                     allScript,
                     e
                 }) {
-                    // console.log({
-                    //     status,
-                    //     allScript,
-                    //     e
-                    // })
-                    // // create jsx file and write component jsx 
+                    // create jsx file and write component jsx 
                     if (status === 'success') {
                         writeJsFileContext(path, allScript);
                     } else {
@@ -170,38 +130,8 @@ const readFileName = (path, fileContext) => {
                     }
                 }
             });
-            // convert html file
-
-            break;
-        // case '.jsx':
-        //     // console.log(fileNameWithoutSuffixArray);
-        //     console.log(path, fileContext);
-        //     writeJsxFileContext(path, fileContext);
-        //     break;
-        // case '.ts':
-        // case '.tsx':
-        //     console.log('typescript', path);
-        //     exec(`tsc ${path}`, (err, stdout, stderr) => {
-        //         if (err) {
-        //             console.error(err);
-        //             return;
-        //         }
-        //         console.log(stdout);
-        //     });
-        //     break;
-        // case '.scss':
-        //     compileSass(fileContext).then((data) => {
-        //         console.log(data.text);
-        //         writeScssFileContext(path, data.text);
-        //     }).catch((err) => {
-        //         vscode.window.showErrorMessage(`Css Error: ${err}`);
-        //     })
-        //     break;
-        default:
-            console.log('Not omi file!')
             break;
     }
-    // return fileNameWithoutSuffix;
 }
 
 function activate(context) {
@@ -212,13 +142,11 @@ function activate(context) {
             fileName
         } = document
         const fileContext = readFileContext(fileName);
-        // console.log(fileName, fileContext);
         readFileName(fileName, fileContext);
     });
 
     // 欢迎提示
     let disposable = vscode.commands.registerCommand('extension.eno', function () {
-        // vscode.window.showInformationMessage('Hello World');
         const panel = vscode.window.createWebviewPanel(
             'testWelcome', // viewType
             "Welcome to Eno Snippets", // 视图标题
@@ -228,7 +156,6 @@ function activate(context) {
                 retainContextWhenHidden: true, // webview被隐藏时保持状态，避免被重置
             }
         );
-        // panel.webview.html = require('./libs/welcome/template');
         panel.webview.html = getWebViewContent(context, './libs/welcome/template.html')
     });
     context.subscriptions.push(disposable);

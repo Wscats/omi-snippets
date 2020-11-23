@@ -1,48 +1,29 @@
 {
   "name": "omi-snippets",
-  "displayName": "Omi Snippets",
-  "description": "A beautify Visual Studio Code extension for .omi .eno .vue or .scss file",
-  "version": "2.2.1",
+  "displayName": "React/Redux/Typescript/Javascript/Omi snippets",
+  "description": "Simple extensions for React/Redux/Typescript/Javascript/Omi snippets",
+  "version": "2.2.7",
   "author": "Eno Yao",
   "publisher": "Wscats",
-  "icon": "logos/omi-logo.png",
+  "icon": "icons/icon.png",
   "homepage": "https://wscats.github.io/omi-docs/public/home/index.html",
   "keywords": [
+    "react",
     "omi",
     "omijs",
     "omi.js",
-    "eno",
-    "eno yao",
-    "yao",
-    "wscats",
-    "yjl",
     "css",
     "scss",
     "sass",
-    "lemon",
-    "laoyao",
-    "one",
-    "jing",
-    "jialong",
-    "yaojialong",
-    "xie",
-    "DK",
-    "lan",
-    "wang",
-    "sha",
-    "react",
     "rax",
     "jsx",
     "sfc",
     "component",
     "vue",
     "single file component",
-    "老姚",
-    "姚",
-    "一一",
     "htm",
     "html",
-    "reky"
+    "redux"
   ],
   "activationEvents": [
     "*",
@@ -156,7 +137,7 @@
       },
       {
         "language": "omi",
-        "path": "./snippets/js.json"
+        "path": "./snippets/javascript.json"
       },
       {
         "language": "omi",
@@ -172,7 +153,7 @@
       },
       {
         "language": "eno",
-        "path": "./snippets/js.json"
+        "path": "./snippets/javascript.json"
       },
       {
         "language": "eno",
@@ -205,6 +186,30 @@
       {
         "language": "html",
         "path": "./snippets/emoji.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/react.json"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./snippets/react.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/react.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./snippets/react.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/typescript.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./snippets/typescript.json"
       }
     ],
     "commands": [
