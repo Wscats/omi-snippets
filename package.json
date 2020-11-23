@@ -2,7 +2,7 @@
   "name": "omi-snippets",
   "displayName": "React/Redux/Typescript/Javascript/Omi snippets",
   "description": "Simple extensions for React/Redux/Typescript/Javascript/Omi snippets",
-  "version": "2.2.7",
+  "version": "2.2.8",
   "author": "Eno Yao",
   "publisher": "Wscats",
   "icon": "icons/icon.png",
