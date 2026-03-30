@@ -31,7 +31,10 @@
   ],
   "main": "./extension",
   "scripts": {
-    "build": "vsce package"
+    "build": "vsce package",
+    "lint": "eslint src --ext .ts,.tsx,.js,.jsx --fix",
+    "test": "jest --coverage",
+    "type-check": "tsc --noEmit"
   },
   "engines": {
     "vscode": "^1.33.0"
