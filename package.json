@@ -34,10 +34,14 @@
     "build": "vsce package",
     "lint": "eslint src --ext .ts,.tsx,.js,.jsx --fix",
     "test": "jest --coverage",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "lint:check": "eslint . --ext .ts,.tsx,.js,.jsx",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "engines": {
-    "vscode": "^1.33.0"
+    "vscode": "^1.33.0",
+    "node": ">=18.0.0"
   },
   "repository": {
     "type": "git",

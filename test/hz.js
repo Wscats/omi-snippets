@@ -1,3 +1,5 @@
+'use strict';
+
 const fileType = (filename)=>{
     const index1 = filename.lastIndexOf(".");
     const index2 = filename.length;

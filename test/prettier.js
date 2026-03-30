@@ -1,5 +1,5 @@
-var prettier = require('prettier')
-var code = `
+const prettier = require('prettier')
+let code = `
 import {
     // register component
     WeElement,
@@ -13,7 +13,7 @@ import {
 } from "omi";
 
 // JS
-var a = 'abc'
+const a = 'abc'
 
 export default class extends WeElement {
     css() {
@@ -38,7 +38,7 @@ export default class extends WeElement {
 
 
 `
-var code = prettier.format(code, {
+const code = prettier.format(code, {
     parser: "babel",
     // pluginSearchDirs: ["./dir-with-plugins"],
     // plugins: ["./foo-plugin"]

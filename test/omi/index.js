@@ -1,6 +1,6 @@
 "use strict";
 exports.__esModule = true;
-var fs_1 = require("fs");
+const fs_1 = require("fs");
 ;
 (function () {
     // console.log(fs);
