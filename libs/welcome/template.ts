@@ -1,4 +1,5 @@
-module.exports = `
+/** Welcome page HTML template for the Omi Snippets extension. */
+const welcomeTemplate: string = `
 <!DOCTYPE html>
 <html lang="">
 
@@ -248,4 +249,6 @@ function go_bottom() {
 
 </body>
 </html>
-`
+`;
+
+export default welcomeTemplate;

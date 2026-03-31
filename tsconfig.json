@@ -14,14 +14,14 @@
     "declarationMap": true,
     "sourceMap": true,
     "skipLibCheck": true,
-    "allowJs": true,
+    "allowJs": false,
     "checkJs": false,
     "outDir": "./dist",
-    "rootDir": "./src",
+    "rootDir": ".",
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "isolatedModules": true
   },
-  "include": ["src/**/*"],
+  "include": ["*.ts", "src/**/*", "libs/**/*"],
   "exclude": ["node_modules", "dist", "build", "**/*.test.ts", "**/*.spec.ts"]
 }
